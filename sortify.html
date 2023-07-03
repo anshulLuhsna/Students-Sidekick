@@ -1,0 +1,4551 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="output.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+
+  <!-- Favicon -->
+  
+  <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./css/libs.bundle.css" />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./css/theme-dark.bundle.css" />
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="multi-select-tag.css">
+  <!-- Title -->
+  <title>   Sortify</title>
+  <style>
+    .logo {
+      height: 36px;
+      width: auto;
+    }
+    .profile-img {
+      border-radius: 50%;
+      border: 4px solid #fff;
+    }
+    td {
+      color: #333333;
+      white-space: normal !important; 
+      word-wrap: break-word;  
+    }
+    .highlight {
+      color: red;
+    }
+  </style>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107504706-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-107504706-1');
+  </script>
+</head>
+
+<body>
+
+
+  <div class="main-content">
+
+    <div class="container-fluid">
+      <div class="row py-4 px-2 align-content-center">
+        <div class="col">
+          
+          <h1 class="mb-1" style="color:#ECE3D3">SORTIFY</h1>
+          <p class="text-muted" style="color:#ECE3D3">Data Source: CapR1 & CapR2 (2021)</p>
+        </div>
+        <div class="col-auto">
+          
+        </div>
+      </div>
+      <div class="row justify-content-center mb-5">
+
+        <!-- Rank -->
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <label for="rank" class="form-label h3" style="color:#ECE3D3">Your Rank</label>
+            <input min="1" max="2000000" type="number" class="form-control" id="rank" style="color:#ECE3D3" placeholder="Enter your rank" />
+          </div>
+        </div>
+        <!-- /Rank -->
+
+        <!-- Category -->
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <label for="categories" class="form-label h3" style="color:#ECE3D3">Your Category</label>
+            <select class="form-select mb-3" style="color:#ECE3D3" id="categories" style="color:#ECE3D3" data-choices='{
+                            "searchEnabled": true,
+                            "choices": [
+                                {
+                                    "value": "All",
+                                    "label": "Select Category",
+                                    "customProperties": {}
+                                },
+                                {
+                                    "value": "GOPENS",
+                                    "label": "GOPENs",
+                                    "customProperties": {}
+                                },
+                                {
+                                    "value": "GOBCS",
+                                    "label": "GOBCS",
+                                    "customProperties": {}
+                                },
+                                {
+                                    "value": "GSTS",
+                                    "label": "GSTS",
+                                    "customProperties": {}
+                                },
+                                
+                                {
+                                  "value": "LOPENS",
+                                    "label": "LOPENS",
+                                    "customProperties": {}
+                                },
+                                {
+                                  "value": "LOBCS",
+                                  "label": "LOBCS",
+                                  "customProperties": {}
+                              },
+                              
+                               
+                                
+                                
+                                
+                                {
+                                    "value": "LSTS",
+                                    "label": "LSTS",
+                                    "customProperties": {}
+                                }
+                            ]
+                        }'>
+            </select>
+          </div>
+        </div>
+        <!-- /Category -->
+
+        <!-- Branches -->
+        <!-- <div class="col-12 col-md-6">
+          <div class="form-group">
+            <label for="branch" class="form-label h3">Search/Select Branches</label>
+            <select class="form-select mb-3" id="branch" data-choices='{
+                            "searchEnabled": true,
+                            "choices": [
+                                {
+                                    "value": "All",
+                                    "label": "All Branches",
+                                    "customProperties": {}
+                                },
+                                
+                                
+                                
+                                {
+                                    "value": "Comp",
+                                    "label": "Comp",
+                                    "customProperties": {}
+                                },
+                                
+                                {
+                                    "value": "Elec",
+                                    "label": "Elec",
+                                    "customProperties": {}
+                                },
+                                
+                                {
+                                    "value": "ENTC",
+                                    "label": "ENTC",
+                                    "customProperties": {}
+                                },
+                                
+                                {
+                                    "value": "IT",
+                                    "label": "IT",
+                                    "customProperties": {}
+                                },
+                                
+                                
+                                {
+                                    "value": "Mech",
+                                    "label": "Mech",
+                                    "customProperties": {}
+                                }
+                            ]
+                        }'>
+            </select>
+          </div>
+        </div>
+        <!-- /Branches -->
+
+        <!-- State -->
+        <!-- <div class="col-12 col-md-6">
+          <div class="form-group">
+            <label for="state" class="form-label h3">Select university</label>
+            <select class="form-select mb-3" id="university" data-choices='{
+                            "searchEnabled": true,
+                            "choices": [
+                                {
+                                    "value": "All",
+                                    "label": "Select university",
+                                    "customProperties": {}
+                                },
+                                {
+                                    "value": "Mumbai",
+                                    "label": "Mumbai",
+                                    "customProperties": {}
+                                },
+                                {
+                                    "value": "Pune",
+                                    "label": "Pune",
+                                    "customProperties": {}
+                                },
+                                {
+                                    "value": "Nagpur",
+                                    "label": "Nagpur",
+                                    "customProperties": {}
+                                },
+                                {
+                                    "value": "RAMU",
+                                    "label": "RAMU",
+                                    "customProperties": {}
+                                },
+                                {
+                                    "value": "BAMU",
+                                    "label": "BAMU",
+                                    "customProperties": {}
+                                },
+                                {
+                                    "value": "NMU",
+                                    "label": "NMU",
+                                    "customProperties": {}
+                                },
+                                
+                                {
+                                    "value": "Shivaji",
+                                    "label": "Shivaji",
+                                    "customProperties": {}
+                                }
+                            ]
+                        }'>
+            </select>
+          </div>
+        </div> -->
+        <!-- /State -->
+
+<!-- Campus-->
+<!-- <div class="col-12 col-md-6">
+  <div class="form-group">
+    <label for="collegeType" class="form-label h3">Campus Size</label>
+    <select class="form-select mb-3" id="campus" data-choices='{
+                    "searchEnabled": true,
+                    "choices": [
+                        {
+                            "value": "Any",
+                            "label": "Any",
+                            "customProperties": {}
+                        },
+                        {
+                            "value": 3,
+                            "label": "Large only",
+                            "customProperties": {}
+                        },
+                        {
+                            "value": 2,
+                            "label": ">=Medium",
+                            "customProperties": {}
+                        },
+                        {
+                            "value": 1,
+                            "label": ">=Small",
+                            "customProperties": {}
+                        }
+                    ]
+                }'>
+    </select>
+  </div>
+</div>
+<!-- naac -->
+<!-- <div class="col-12 col-md-6">
+  <div class="form-group">
+    <label for="collegeType" class="form-label h3">NAAC rating</label>
+    <select class="form-select mb-3" id="naac" data-choices='{
+                    "searchEnabled": true,
+                    "choices": [
+                        {
+                            "value": "Any",
+                            "label": "Any",
+                            "customProperties": {}
+                        },
+                        {
+                            "value": 3,
+                            "label": "A++ only",
+                            "customProperties": {}
+                        },
+                        {
+                            "value": 2,
+                            "label": ">= A+",
+                            "customProperties": {}
+                        },
+                        {
+                            "value": 1,
+                            "label": ">= A",
+                            "customProperties": {}
+                        }
+                    ]
+                }'>
+    </select>
+  </div>
+</div> -->
+<!-- naac -->
+<!-- Campus -->
+
+<div class="col-12 col-md-6">
+  <div class="form-group">
+    <label for="collegeType" class="form-label h3">College & branch</label>
+    <select name="countries" id="countries"; multiple>
+      
+      <option value="Veermata  Jijabai Technological  Institute(VJTI), Matunga,  Mumbai (Comp)">Veermata  Jijabai Technological  Institute(VJTI), Matunga,  Mumbai (Comp)</option>
+<option value="Veermata  Jijabai Technological  Institute(VJTI), Matunga,  Mumbai (IT)">Veermata  Jijabai Technological  Institute(VJTI), Matunga,  Mumbai (IT)</option>
+<option value="Veermata  Jijabai Technological  Institute(VJTI), Matunga,  Mumbai (ENTC)">Veermata  Jijabai Technological  Institute(VJTI), Matunga,  Mumbai (ENTC)</option>
+<option value="Veermata  Jijabai Technological  Institute(VJTI), Matunga,  Mumbai (Mech)">Veermata  Jijabai Technological  Institute(VJTI), Matunga,  Mumbai (Mech)</option>
+<option value="Veermata  Jijabai Technological  Institute(VJTI), Matunga,  Mumbai (Elec)">Veermata  Jijabai Technological  Institute(VJTI), Matunga,  Mumbai (Elec)</option>
+<option value="College of Engineering,  Pune (Comp)">College of Engineering,  Pune (Comp)</option>
+<option value="College of Engineering,  Pune (IT)">College of Engineering,  Pune (IT)</option>
+<option value="College of Engineering,  Pune (ENTC)">College of Engineering,  Pune (ENTC)</option>
+<option value="College of Engineering,  Pune (Mech)">College of Engineering,  Pune (Mech)</option>
+<option value="College of Engineering,  Pune (Elec)">College of Engineering,  Pune (Elec)</option>
+<option value="Bhartiya  Vidya  Bhavan's  Sardar  Patel  Institute of Technology  ,  Andheri, Mumbai (Comp)">Bhartiya  Vidya  Bhavan's  Sardar  Patel  Institute of Technology  ,  Andheri, Mumbai (Comp)</option>
+<option value="Bhartiya  Vidya  Bhavan's  Sardar  Patel  Institute of Technology  ,  Andheri, Mumbai (IT)">Bhartiya  Vidya  Bhavan's  Sardar  Patel  Institute of Technology  ,  Andheri, Mumbai (IT)</option>
+<option value="Bhartiya  Vidya  Bhavan's  Sardar  Patel  Institute of Technology  ,  Andheri, Mumbai (ENTC)">Bhartiya  Vidya  Bhavan's  Sardar  Patel  Institute of Technology  ,  Andheri, Mumbai (ENTC)</option>
+<option value="Bhartiya  Vidya  Bhavan's  Sardar  Patel  Institute of Technology  ,  Andheri, Mumbai (Mech)">Bhartiya  Vidya  Bhavan's  Sardar  Patel  Institute of Technology  ,  Andheri, Mumbai (Mech)</option>
+<option value="Bhartiya  Vidya  Bhavan's  Sardar  Patel  Institute of Technology  ,  Andheri, Mumbai (Elec)">Bhartiya  Vidya  Bhavan's  Sardar  Patel  Institute of Technology  ,  Andheri, Mumbai (Elec)</option>
+<option value="Pune Institute of  Computer Technology,  Dhankavdi, Pune (Comp)">Pune Institute of  Computer Technology,  Dhankavdi, Pune (Comp)</option>
+<option value="Pune Institute of  Computer Technology,  Dhankavdi, Pune (IT)">Pune Institute of  Computer Technology,  Dhankavdi, Pune (IT)</option>
+<option value="Pune Institute of  Computer Technology,  Dhankavdi, Pune (ENTC)">Pune Institute of  Computer Technology,  Dhankavdi, Pune (ENTC)</option>
+<option value="Pune Institute of  Computer Technology,  Dhankavdi, Pune (Mech)">Pune Institute of  Computer Technology,  Dhankavdi, Pune (Mech)</option>
+<option value="Pune Institute of  Computer Technology,  Dhankavdi, Pune (Elec)">Pune Institute of  Computer Technology,  Dhankavdi, Pune (Elec)</option>
+<option value="Shri Vile Parle Kelvani Mandal's  Dwarkadas  J. Sanghvi College of  Engineering,  Vile  Parle,Mumbai (Comp)">Shri Vile Parle Kelvani Mandal's  Dwarkadas  J. Sanghvi College of  Engineering,  Vile  Parle,Mumbai (Comp)</option>
+<option value="Shri Vile Parle Kelvani Mandal's  Dwarkadas  J. Sanghvi College of  Engineering,  Vile  Parle,Mumbai (IT)">Shri Vile Parle Kelvani Mandal's  Dwarkadas  J. Sanghvi College of  Engineering,  Vile  Parle,Mumbai (IT)</option>
+<option value="Shri Vile Parle Kelvani Mandal's  Dwarkadas  J. Sanghvi College of  Engineering,  Vile  Parle,Mumbai (ENTC)">Shri Vile Parle Kelvani Mandal's  Dwarkadas  J. Sanghvi College of  Engineering,  Vile  Parle,Mumbai (ENTC)</option>
+<option value="Shri Vile Parle Kelvani Mandal's  Dwarkadas  J. Sanghvi College of  Engineering,  Vile  Parle,Mumbai (Mech)">Shri Vile Parle Kelvani Mandal's  Dwarkadas  J. Sanghvi College of  Engineering,  Vile  Parle,Mumbai (Mech)</option>
+<option value="Shri Vile Parle Kelvani Mandal's  Dwarkadas  J. Sanghvi College of  Engineering,  Vile  Parle,Mumbai (Elec)">Shri Vile Parle Kelvani Mandal's  Dwarkadas  J. Sanghvi College of  Engineering,  Vile  Parle,Mumbai (Elec)</option>
+<option value="Walchand  College of  Engineering,  Sangli (Comp)">Walchand  College of  Engineering,  Sangli (Comp)</option>
+<option value="Walchand  College of  Engineering,  Sangli (IT)">Walchand  College of  Engineering,  Sangli (IT)</option>
+<option value="Walchand  College of  Engineering,  Sangli (ENTC)">Walchand  College of  Engineering,  Sangli (ENTC)</option>
+<option value="Walchand  College of  Engineering,  Sangli (Mech)">Walchand  College of  Engineering,  Sangli (Mech)</option>
+<option value="Walchand  College of  Engineering,  Sangli (Elec)">Walchand  College of  Engineering,  Sangli (Elec)</option>
+<option value="Bansilal  Ramnath Agarawal  Charitable Trust's  Vishwakarma  Institute of Technology,  Bibwewadi, Pune (Comp)">Bansilal  Ramnath Agarawal  Charitable Trust's  Vishwakarma  Institute of Technology,  Bibwewadi, Pune (Comp)</option>
+<option value="Bansilal  Ramnath Agarawal  Charitable Trust's  Vishwakarma  Institute of Technology,  Bibwewadi, Pune (IT)">Bansilal  Ramnath Agarawal  Charitable Trust's  Vishwakarma  Institute of Technology,  Bibwewadi, Pune (IT)</option>
+<option value="Bansilal  Ramnath Agarawal  Charitable Trust's  Vishwakarma  Institute of Technology,  Bibwewadi, Pune (ENTC)">Bansilal  Ramnath Agarawal  Charitable Trust's  Vishwakarma  Institute of Technology,  Bibwewadi, Pune (ENTC)</option>
+<option value="Bansilal  Ramnath Agarawal  Charitable Trust's  Vishwakarma  Institute of Technology,  Bibwewadi, Pune (Mech)">Bansilal  Ramnath Agarawal  Charitable Trust's  Vishwakarma  Institute of Technology,  Bibwewadi, Pune (Mech)</option>
+<option value="Bansilal  Ramnath Agarawal  Charitable Trust's  Vishwakarma  Institute of Technology,  Bibwewadi, Pune (Elec)">Bansilal  Ramnath Agarawal  Charitable Trust's  Vishwakarma  Institute of Technology,  Bibwewadi, Pune (Elec)</option>
+<option value="Pimpri Chinchwad  Education Trust,  Pimpri Chinchwad  College of Engineering,  Pune (Comp)">Pimpri Chinchwad  Education Trust,  Pimpri Chinchwad  College of Engineering,  Pune (Comp)</option>
+<option value="Pimpri Chinchwad  Education Trust,  Pimpri Chinchwad  College of Engineering,  Pune (IT)">Pimpri Chinchwad  Education Trust,  Pimpri Chinchwad  College of Engineering,  Pune (IT)</option>
+<option value="Pimpri Chinchwad  Education Trust,  Pimpri Chinchwad  College of Engineering,  Pune (ENTC)">Pimpri Chinchwad  Education Trust,  Pimpri Chinchwad  College of Engineering,  Pune (ENTC)</option>
+<option value="Pimpri Chinchwad  Education Trust,  Pimpri Chinchwad  College of Engineering,  Pune (Mech)">Pimpri Chinchwad  Education Trust,  Pimpri Chinchwad  College of Engineering,  Pune (Mech)</option>
+<option value="Pimpri Chinchwad  Education Trust,  Pimpri Chinchwad  College of Engineering,  Pune (Elec)">Pimpri Chinchwad  Education Trust,  Pimpri Chinchwad  College of Engineering,  Pune (Elec)</option>
+<option value="MKSSS's  Cummins  College of  Engineering  for  Women, Karvenagar,Pune (Comp)">MKSSS's  Cummins  College of  Engineering  for  Women, Karvenagar,Pune (Comp)</option>
+<option value="MKSSS's  Cummins  College of  Engineering  for  Women, Karvenagar,Pune (IT)">MKSSS's  Cummins  College of  Engineering  for  Women, Karvenagar,Pune (IT)</option>
+<option value="MKSSS's  Cummins  College of  Engineering  for  Women, Karvenagar,Pune (ENTC)">MKSSS's  Cummins  College of  Engineering  for  Women, Karvenagar,Pune (ENTC)</option>
+<option value="MKSSS's  Cummins  College of  Engineering  for  Women, Karvenagar,Pune (Mech)">MKSSS's  Cummins  College of  Engineering  for  Women, Karvenagar,Pune (Mech)</option>
+<option value="MKSSS's  Cummins  College of  Engineering  for  Women, Karvenagar,Pune (Elec)">MKSSS's  Cummins  College of  Engineering  for  Women, Karvenagar,Pune (Elec)</option>
+<option value="Thadomal  Shahani Engineering  College, Bandra, Mumbai (Comp)">Thadomal  Shahani Engineering  College, Bandra, Mumbai (Comp)</option>
+<option value="Thadomal  Shahani Engineering  College, Bandra, Mumbai (IT)">Thadomal  Shahani Engineering  College, Bandra, Mumbai (IT)</option>
+<option value="Thadomal  Shahani Engineering  College, Bandra, Mumbai (ENTC)">Thadomal  Shahani Engineering  College, Bandra, Mumbai (ENTC)</option>
+<option value="Thadomal  Shahani Engineering  College, Bandra, Mumbai (Mech)">Thadomal  Shahani Engineering  College, Bandra, Mumbai (Mech)</option>
+<option value="Thadomal  Shahani Engineering  College, Bandra, Mumbai (Elec)">Thadomal  Shahani Engineering  College, Bandra, Mumbai (Elec)</option>
+<option value="Shri  Ramdeobaba  College of  Engineering  and  Management, Nagpur (Comp)">Shri  Ramdeobaba  College of  Engineering  and  Management, Nagpur (Comp)</option>
+<option value="Shri  Ramdeobaba  College of  Engineering  and  Management, Nagpur (IT)">Shri  Ramdeobaba  College of  Engineering  and  Management, Nagpur (IT)</option>
+<option value="Shri  Ramdeobaba  College of  Engineering  and  Management, Nagpur (ENTC)">Shri  Ramdeobaba  College of  Engineering  and  Management, Nagpur (ENTC)</option>
+<option value="Shri  Ramdeobaba  College of  Engineering  and  Management, Nagpur (Mech)">Shri  Ramdeobaba  College of  Engineering  and  Management, Nagpur (Mech)</option>
+<option value="Shri  Ramdeobaba  College of  Engineering  and  Management, Nagpur (Elec)">Shri  Ramdeobaba  College of  Engineering  and  Management, Nagpur (Elec)</option>
+<option value="Vivekanand  Education Society's  Institute of Technology, Chembur, Mumbai (Comp)">Vivekanand  Education Society's  Institute of Technology, Chembur, Mumbai (Comp)</option>
+<option value="Vivekanand  Education Society's  Institute of Technology, Chembur, Mumbai (IT)">Vivekanand  Education Society's  Institute of Technology, Chembur, Mumbai (IT)</option>
+<option value="Vivekanand  Education Society's  Institute of Technology, Chembur, Mumbai (ENTC)">Vivekanand  Education Society's  Institute of Technology, Chembur, Mumbai (ENTC)</option>
+<option value="Vivekanand  Education Society's  Institute of Technology, Chembur, Mumbai (Mech)">Vivekanand  Education Society's  Institute of Technology, Chembur, Mumbai (Mech)</option>
+<option value="Vivekanand  Education Society's  Institute of Technology, Chembur, Mumbai (Elec)">Vivekanand  Education Society's  Institute of Technology, Chembur, Mumbai (Elec)</option>
+<option value="B.R.A.C.T's  Vishwakarma  Institute of Information Technology,  Kondhwa  (Bk.), Pune (Comp)">B.R.A.C.T's  Vishwakarma  Institute of Information Technology,  Kondhwa  (Bk.), Pune (Comp)</option>
+<option value="B.R.A.C.T's  Vishwakarma  Institute of Information Technology,  Kondhwa  (Bk.), Pune (IT)">B.R.A.C.T's  Vishwakarma  Institute of Information Technology,  Kondhwa  (Bk.), Pune (IT)</option>
+<option value="B.R.A.C.T's  Vishwakarma  Institute of Information Technology,  Kondhwa  (Bk.), Pune (ENTC)">B.R.A.C.T's  Vishwakarma  Institute of Information Technology,  Kondhwa  (Bk.), Pune (ENTC)</option>
+<option value="B.R.A.C.T's  Vishwakarma  Institute of Information Technology,  Kondhwa  (Bk.), Pune (Mech)">B.R.A.C.T's  Vishwakarma  Institute of Information Technology,  Kondhwa  (Bk.), Pune (Mech)</option>
+<option value="B.R.A.C.T's  Vishwakarma  Institute of Information Technology,  Kondhwa  (Bk.), Pune (Elec)">B.R.A.C.T's  Vishwakarma  Institute of Information Technology,  Kondhwa  (Bk.), Pune (Elec)</option>
+<option value="Government  College of  Engineering,  Aurangabad (Comp)">Government  College of  Engineering,  Aurangabad (Comp)</option>
+<option value="Government  College of  Engineering,  Aurangabad (IT)">Government  College of  Engineering,  Aurangabad (IT)</option>
+<option value="Government  College of  Engineering,  Aurangabad (ENTC)">Government  College of  Engineering,  Aurangabad (ENTC)</option>
+<option value="Government  College of  Engineering,  Aurangabad (Mech)">Government  College of  Engineering,  Aurangabad (Mech)</option>
+<option value="Government  College of  Engineering,  Aurangabad (Elec)">Government  College of  Engineering,  Aurangabad (Elec)</option>
+<option value="Pune  Vidyarthi Griha's  College of  Engineering  and  Technology  and  G K  Pate(Wani)  Institute of  Management, Pune (Comp)">Pune  Vidyarthi Griha's  College of  Engineering  and  Technology  and  G K  Pate(Wani)  Institute of  Management, Pune (Comp)</option>
+<option value="Pune  Vidyarthi Griha's  College of  Engineering  and  Technology  and  G K  Pate(Wani)  Institute of  Management, Pune (IT)">Pune  Vidyarthi Griha's  College of  Engineering  and  Technology  and  G K  Pate(Wani)  Institute of  Management, Pune (IT)</option>
+<option value="Pune  Vidyarthi Griha's  College of  Engineering  and  Technology  and  G K  Pate(Wani)  Institute of  Management, Pune (ENTC)">Pune  Vidyarthi Griha's  College of  Engineering  and  Technology  and  G K  Pate(Wani)  Institute of  Management, Pune (ENTC)</option>
+<option value="Pune  Vidyarthi Griha's  College of  Engineering  and  Technology  and  G K  Pate(Wani)  Institute of  Management, Pune (Mech)">Pune  Vidyarthi Griha's  College of  Engineering  and  Technology  and  G K  Pate(Wani)  Institute of  Management, Pune (Mech)</option>
+<option value="Pune  Vidyarthi Griha's  College of  Engineering  and  Technology  and  G K  Pate(Wani)  Institute of  Management, Pune (Elec)">Pune  Vidyarthi Griha's  College of  Engineering  and  Technology  and  G K  Pate(Wani)  Institute of  Management, Pune (Elec)</option>
+<option value="K  J  Somaiya  Institute of  Engineering  and  Information Technology,  Sion, Mumbai (Comp)">K  J  Somaiya  Institute of  Engineering  and  Information Technology,  Sion, Mumbai (Comp)</option>
+<option value="K  J  Somaiya  Institute of  Engineering  and  Information Technology,  Sion, Mumbai (IT)">K  J  Somaiya  Institute of  Engineering  and  Information Technology,  Sion, Mumbai (IT)</option>
+<option value="K  J  Somaiya  Institute of  Engineering  and  Information Technology,  Sion, Mumbai (ENTC)">K  J  Somaiya  Institute of  Engineering  and  Information Technology,  Sion, Mumbai (ENTC)</option>
+<option value="K  J  Somaiya  Institute of  Engineering  and  Information Technology,  Sion, Mumbai (Mech)">K  J  Somaiya  Institute of  Engineering  and  Information Technology,  Sion, Mumbai (Mech)</option>
+<option value="K  J  Somaiya  Institute of  Engineering  and  Information Technology,  Sion, Mumbai (Elec)">K  J  Somaiya  Institute of  Engineering  and  Information Technology,  Sion, Mumbai (Elec)</option>
+<option value="Government  College of  Engineering,  Amravati (Comp)">Government  College of  Engineering,  Amravati (Comp)</option>
+<option value="Government  College of  Engineering,  Amravati (IT)">Government  College of  Engineering,  Amravati (IT)</option>
+<option value="Government  College of  Engineering,  Amravati (ENTC)">Government  College of  Engineering,  Amravati (ENTC)</option>
+<option value="Government  College of  Engineering,  Amravati (Mech)">Government  College of  Engineering,  Amravati (Mech)</option>
+<option value="Government  College of  Engineering,  Amravati (Elec)">Government  College of  Engineering,  Amravati (Elec)</option>
+<option value="Fr.  Conceicao Rodrigues  College of Engineering,  Bandra,Mumbai (Comp)">Fr.  Conceicao Rodrigues  College of Engineering,  Bandra,Mumbai (Comp)</option>
+<option value="Fr.  Conceicao Rodrigues  College of Engineering,  Bandra,Mumbai (IT)">Fr.  Conceicao Rodrigues  College of Engineering,  Bandra,Mumbai (IT)</option>
+<option value="Fr.  Conceicao Rodrigues  College of Engineering,  Bandra,Mumbai (ENTC)">Fr.  Conceicao Rodrigues  College of Engineering,  Bandra,Mumbai (ENTC)</option>
+<option value="Fr.  Conceicao Rodrigues  College of Engineering,  Bandra,Mumbai (Mech)">Fr.  Conceicao Rodrigues  College of Engineering,  Bandra,Mumbai (Mech)</option>
+<option value="Fr.  Conceicao Rodrigues  College of Engineering,  Bandra,Mumbai (Elec)">Fr.  Conceicao Rodrigues  College of Engineering,  Bandra,Mumbai (Elec)</option>
+<option value="Agnel  Charities'  FR. C.  Rodrigues  Institute of Technology, Vashi, Navi Mumbai (Comp)">Agnel  Charities'  FR. C.  Rodrigues  Institute of Technology, Vashi, Navi Mumbai (Comp)</option>
+<option value="Agnel  Charities'  FR. C.  Rodrigues  Institute of Technology, Vashi, Navi Mumbai (IT)">Agnel  Charities'  FR. C.  Rodrigues  Institute of Technology, Vashi, Navi Mumbai (IT)</option>
+<option value="Agnel  Charities'  FR. C.  Rodrigues  Institute of Technology, Vashi, Navi Mumbai (ENTC)">Agnel  Charities'  FR. C.  Rodrigues  Institute of Technology, Vashi, Navi Mumbai (ENTC)</option>
+<option value="Agnel  Charities'  FR. C.  Rodrigues  Institute of Technology, Vashi, Navi Mumbai (Mech)">Agnel  Charities'  FR. C.  Rodrigues  Institute of Technology, Vashi, Navi Mumbai (Mech)</option>
+<option value="Agnel  Charities'  FR. C.  Rodrigues  Institute of Technology, Vashi, Navi Mumbai (Elec)">Agnel  Charities'  FR. C.  Rodrigues  Institute of Technology, Vashi, Navi Mumbai (Elec)</option>
+<option value="International  Institute of Information Technology  (I�IT), Pune. (Comp)">International  Institute of Information Technology  (I�IT), Pune. (Comp)</option>
+<option value="International  Institute of Information Technology  (I�IT), Pune. (IT)">International  Institute of Information Technology  (I�IT), Pune. (IT)</option>
+<option value="International  Institute of Information Technology  (I�IT), Pune. (ENTC)">International  Institute of Information Technology  (I�IT), Pune. (ENTC)</option>
+<option value="International  Institute of Information Technology  (I�IT), Pune. (Mech)">International  Institute of Information Technology  (I�IT), Pune. (Mech)</option>
+<option value="International  Institute of Information Technology  (I�IT), Pune. (Elec)">International  Institute of Information Technology  (I�IT), Pune. (Elec)</option>
+<option value="Vidyalankar  Institute of Technology,Wadala,  Mumbai (Comp)">Vidyalankar  Institute of Technology,Wadala,  Mumbai (Comp)</option>
+<option value="Vidyalankar  Institute of Technology,Wadala,  Mumbai (IT)">Vidyalankar  Institute of Technology,Wadala,  Mumbai (IT)</option>
+<option value="Vidyalankar  Institute of Technology,Wadala,  Mumbai (ENTC)">Vidyalankar  Institute of Technology,Wadala,  Mumbai (ENTC)</option>
+<option value="Vidyalankar  Institute of Technology,Wadala,  Mumbai (Mech)">Vidyalankar  Institute of Technology,Wadala,  Mumbai (Mech)</option>
+<option value="Vidyalankar  Institute of Technology,Wadala,  Mumbai (Elec)">Vidyalankar  Institute of Technology,Wadala,  Mumbai (Elec)</option>
+<option value="Pimpri Chinchwad  Education Trust's  Pimpri Chinchwad  College Of Engineering  And  Research, Ravet (Comp)">Pimpri Chinchwad  Education Trust's  Pimpri Chinchwad  College Of Engineering  And  Research, Ravet (Comp)</option>
+<option value="Pimpri Chinchwad  Education Trust's  Pimpri Chinchwad  College Of Engineering  And  Research, Ravet (IT)">Pimpri Chinchwad  Education Trust's  Pimpri Chinchwad  College Of Engineering  And  Research, Ravet (IT)</option>
+<option value="Pimpri Chinchwad  Education Trust's  Pimpri Chinchwad  College Of Engineering  And  Research, Ravet (ENTC)">Pimpri Chinchwad  Education Trust's  Pimpri Chinchwad  College Of Engineering  And  Research, Ravet (ENTC)</option>
+<option value="Pimpri Chinchwad  Education Trust's  Pimpri Chinchwad  College Of Engineering  And  Research, Ravet (Mech)">Pimpri Chinchwad  Education Trust's  Pimpri Chinchwad  College Of Engineering  And  Research, Ravet (Mech)</option>
+<option value="Pimpri Chinchwad  Education Trust's  Pimpri Chinchwad  College Of Engineering  And  Research, Ravet (Elec)">Pimpri Chinchwad  Education Trust's  Pimpri Chinchwad  College Of Engineering  And  Research, Ravet (Elec)</option>
+<option value="Shri Guru  Gobind  Singhji Institute of  Engineering  and  Technology,  Nanded (Comp)">Shri Guru  Gobind  Singhji Institute of  Engineering  and  Technology,  Nanded (Comp)</option>
+<option value="Shri Guru  Gobind  Singhji Institute of  Engineering  and  Technology,  Nanded (IT)">Shri Guru  Gobind  Singhji Institute of  Engineering  and  Technology,  Nanded (IT)</option>
+<option value="Shri Guru  Gobind  Singhji Institute of  Engineering  and  Technology,  Nanded (ENTC)">Shri Guru  Gobind  Singhji Institute of  Engineering  and  Technology,  Nanded (ENTC)</option>
+<option value="Shri Guru  Gobind  Singhji Institute of  Engineering  and  Technology,  Nanded (Mech)">Shri Guru  Gobind  Singhji Institute of  Engineering  and  Technology,  Nanded (Mech)</option>
+<option value="Shri Guru  Gobind  Singhji Institute of  Engineering  and  Technology,  Nanded (Elec)">Shri Guru  Gobind  Singhji Institute of  Engineering  and  Technology,  Nanded (Elec)</option>
+<option value="MIT  Academy  of  Engineering,Alandi, Pune (Comp)">MIT  Academy  of  Engineering,Alandi, Pune (Comp)</option>
+<option value="MIT  Academy  of  Engineering,Alandi, Pune (IT)">MIT  Academy  of  Engineering,Alandi, Pune (IT)</option>
+<option value="MIT  Academy  of  Engineering,Alandi, Pune (ENTC)">MIT  Academy  of  Engineering,Alandi, Pune (ENTC)</option>
+<option value="MIT  Academy  of  Engineering,Alandi, Pune (Mech)">MIT  Academy  of  Engineering,Alandi, Pune (Mech)</option>
+<option value="MIT  Academy  of  Engineering,Alandi, Pune (Elec)">MIT  Academy  of  Engineering,Alandi, Pune (Elec)</option>
+<option value="All  India  Shri Shivaji Memorial  Society's  College of Engineering,  Pune (Comp)">All  India  Shri Shivaji Memorial  Society's  College of Engineering,  Pune (Comp)</option>
+<option value="All  India  Shri Shivaji Memorial  Society's  College of Engineering,  Pune (IT)">All  India  Shri Shivaji Memorial  Society's  College of Engineering,  Pune (IT)</option>
+<option value="All  India  Shri Shivaji Memorial  Society's  College of Engineering,  Pune (ENTC)">All  India  Shri Shivaji Memorial  Society's  College of Engineering,  Pune (ENTC)</option>
+<option value="All  India  Shri Shivaji Memorial  Society's  College of Engineering,  Pune (Mech)">All  India  Shri Shivaji Memorial  Society's  College of Engineering,  Pune (Mech)</option>
+<option value="All  India  Shri Shivaji Memorial  Society's  College of Engineering,  Pune (Elec)">All  India  Shri Shivaji Memorial  Society's  College of Engineering,  Pune (Elec)</option>
+<option value="Thakur  College of Engineering  and  Technology,  Kandivali, Mumbai (Comp)">Thakur  College of Engineering  and  Technology,  Kandivali, Mumbai (Comp)</option>
+<option value="Thakur  College of Engineering  and  Technology,  Kandivali, Mumbai (IT)">Thakur  College of Engineering  and  Technology,  Kandivali, Mumbai (IT)</option>
+<option value="Thakur  College of Engineering  and  Technology,  Kandivali, Mumbai (ENTC)">Thakur  College of Engineering  and  Technology,  Kandivali, Mumbai (ENTC)</option>
+<option value="Thakur  College of Engineering  and  Technology,  Kandivali, Mumbai (Mech)">Thakur  College of Engineering  and  Technology,  Kandivali, Mumbai (Mech)</option>
+<option value="Thakur  College of Engineering  and  Technology,  Kandivali, Mumbai (Elec)">Thakur  College of Engineering  and  Technology,  Kandivali, Mumbai (Elec)</option>
+<option value="Government  College of  Engineering,  Nagpur (Comp)">Government  College of  Engineering,  Nagpur (Comp)</option>
+<option value="Government  College of  Engineering,  Nagpur (IT)">Government  College of  Engineering,  Nagpur (IT)</option>
+<option value="Government  College of  Engineering,  Nagpur (ENTC)">Government  College of  Engineering,  Nagpur (ENTC)</option>
+<option value="Government  College of  Engineering,  Nagpur (Mech)">Government  College of  Engineering,  Nagpur (Mech)</option>
+<option value="Government  College of  Engineering,  Nagpur (Elec)">Government  College of  Engineering,  Nagpur (Elec)</option>
+<option value="Dr. D. Y.  Patil Pratishthan's  D.Y.Patil  College of Engineering  Akurdi, Pune (Comp)">Dr. D. Y.  Patil Pratishthan's  D.Y.Patil  College of Engineering  Akurdi, Pune (Comp)</option>
+<option value="Dr. D. Y.  Patil Pratishthan's  D.Y.Patil  College of Engineering  Akurdi, Pune (IT)">Dr. D. Y.  Patil Pratishthan's  D.Y.Patil  College of Engineering  Akurdi, Pune (IT)</option>
+<option value="Dr. D. Y.  Patil Pratishthan's  D.Y.Patil  College of Engineering  Akurdi, Pune (ENTC)">Dr. D. Y.  Patil Pratishthan's  D.Y.Patil  College of Engineering  Akurdi, Pune (ENTC)</option>
+<option value="Dr. D. Y.  Patil Pratishthan's  D.Y.Patil  College of Engineering  Akurdi, Pune (Mech)">Dr. D. Y.  Patil Pratishthan's  D.Y.Patil  College of Engineering  Akurdi, Pune (Mech)</option>
+<option value="Dr. D. Y.  Patil Pratishthan's  D.Y.Patil  College of Engineering  Akurdi, Pune (Elec)">Dr. D. Y.  Patil Pratishthan's  D.Y.Patil  College of Engineering  Akurdi, Pune (Elec)</option>
+<option value="Manjara  Charitable Trust's  Rajiv Gandhi Institute of Technology, Mumbai (Comp)">Manjara  Charitable Trust's  Rajiv Gandhi Institute of Technology, Mumbai (Comp)</option>
+<option value="Manjara  Charitable Trust's  Rajiv Gandhi Institute of Technology, Mumbai (IT)">Manjara  Charitable Trust's  Rajiv Gandhi Institute of Technology, Mumbai (IT)</option>
+<option value="Manjara  Charitable Trust's  Rajiv Gandhi Institute of Technology, Mumbai (ENTC)">Manjara  Charitable Trust's  Rajiv Gandhi Institute of Technology, Mumbai (ENTC)</option>
+<option value="Manjara  Charitable Trust's  Rajiv Gandhi Institute of Technology, Mumbai (Mech)">Manjara  Charitable Trust's  Rajiv Gandhi Institute of Technology, Mumbai (Mech)</option>
+<option value="Manjara  Charitable Trust's  Rajiv Gandhi Institute of Technology, Mumbai (Elec)">Manjara  Charitable Trust's  Rajiv Gandhi Institute of Technology, Mumbai (Elec)</option>
+<option value="St. Francis  Institute of  Technology,Borivali,  Mumbai (Comp)">St. Francis  Institute of  Technology,Borivali,  Mumbai (Comp)</option>
+<option value="St. Francis  Institute of  Technology,Borivali,  Mumbai (IT)">St. Francis  Institute of  Technology,Borivali,  Mumbai (IT)</option>
+<option value="St. Francis  Institute of  Technology,Borivali,  Mumbai (ENTC)">St. Francis  Institute of  Technology,Borivali,  Mumbai (ENTC)</option>
+<option value="St. Francis  Institute of  Technology,Borivali,  Mumbai (Mech)">St. Francis  Institute of  Technology,Borivali,  Mumbai (Mech)</option>
+<option value="St. Francis  Institute of  Technology,Borivali,  Mumbai (Elec)">St. Francis  Institute of  Technology,Borivali,  Mumbai (Elec)</option>
+<option value="Government  College of  Engineering  &  Research,  Avasari  Khurd (Comp)">Government  College of  Engineering  &  Research,  Avasari  Khurd (Comp)</option>
+<option value="Government  College of  Engineering  &  Research,  Avasari  Khurd (IT)">Government  College of  Engineering  &  Research,  Avasari  Khurd (IT)</option>
+<option value="Government  College of  Engineering  &  Research,  Avasari  Khurd (ENTC)">Government  College of  Engineering  &  Research,  Avasari  Khurd (ENTC)</option>
+<option value="Government  College of  Engineering  &  Research,  Avasari  Khurd (Mech)">Government  College of  Engineering  &  Research,  Avasari  Khurd (Mech)</option>
+<option value="Government  College of  Engineering  &  Research,  Avasari  Khurd (Elec)">Government  College of  Engineering  &  Research,  Avasari  Khurd (Elec)</option>
+<option value="Jaywant  Shikshan Prasarak Mandal's,Rajarshi Shahu College of Engineering,  Tathawade,  Pune (Comp)">Jaywant  Shikshan Prasarak Mandal's,Rajarshi Shahu College of Engineering,  Tathawade,  Pune (Comp)</option>
+<option value="Jaywant  Shikshan Prasarak Mandal's,Rajarshi Shahu College of Engineering,  Tathawade,  Pune (IT)">Jaywant  Shikshan Prasarak Mandal's,Rajarshi Shahu College of Engineering,  Tathawade,  Pune (IT)</option>
+<option value="Jaywant  Shikshan Prasarak Mandal's,Rajarshi Shahu College of Engineering,  Tathawade,  Pune (ENTC)">Jaywant  Shikshan Prasarak Mandal's,Rajarshi Shahu College of Engineering,  Tathawade,  Pune (ENTC)</option>
+<option value="Jaywant  Shikshan Prasarak Mandal's,Rajarshi Shahu College of Engineering,  Tathawade,  Pune (Mech)">Jaywant  Shikshan Prasarak Mandal's,Rajarshi Shahu College of Engineering,  Tathawade,  Pune (Mech)</option>
+<option value="Jaywant  Shikshan Prasarak Mandal's,Rajarshi Shahu College of Engineering,  Tathawade,  Pune (Elec)">Jaywant  Shikshan Prasarak Mandal's,Rajarshi Shahu College of Engineering,  Tathawade,  Pune (Elec)</option>
+<option value="Xavier  Institute Of Engineering  C/O Xavier  Technical  Institute,Mahim,Mumbai (Comp)">Xavier  Institute Of Engineering  C/O Xavier  Technical  Institute,Mahim,Mumbai (Comp)</option>
+<option value="Xavier  Institute Of Engineering  C/O Xavier  Technical  Institute,Mahim,Mumbai (IT)">Xavier  Institute Of Engineering  C/O Xavier  Technical  Institute,Mahim,Mumbai (IT)</option>
+<option value="Xavier  Institute Of Engineering  C/O Xavier  Technical  Institute,Mahim,Mumbai (ENTC)">Xavier  Institute Of Engineering  C/O Xavier  Technical  Institute,Mahim,Mumbai (ENTC)</option>
+<option value="Xavier  Institute Of Engineering  C/O Xavier  Technical  Institute,Mahim,Mumbai (Mech)">Xavier  Institute Of Engineering  C/O Xavier  Technical  Institute,Mahim,Mumbai (Mech)</option>
+<option value="Xavier  Institute Of Engineering  C/O Xavier  Technical  Institute,Mahim,Mumbai (Elec)">Xavier  Institute Of Engineering  C/O Xavier  Technical  Institute,Mahim,Mumbai (Elec)</option>
+<option value="S.I.E.S. Graduate School  of Technology,  Nerul, Navi Mumbai (Comp)">S.I.E.S. Graduate School  of Technology,  Nerul, Navi Mumbai (Comp)</option>
+<option value="S.I.E.S. Graduate School  of Technology,  Nerul, Navi Mumbai (IT)">S.I.E.S. Graduate School  of Technology,  Nerul, Navi Mumbai (IT)</option>
+<option value="S.I.E.S. Graduate School  of Technology,  Nerul, Navi Mumbai (ENTC)">S.I.E.S. Graduate School  of Technology,  Nerul, Navi Mumbai (ENTC)</option>
+<option value="S.I.E.S. Graduate School  of Technology,  Nerul, Navi Mumbai (Mech)">S.I.E.S. Graduate School  of Technology,  Nerul, Navi Mumbai (Mech)</option>
+<option value="S.I.E.S. Graduate School  of Technology,  Nerul, Navi Mumbai (Elec)">S.I.E.S. Graduate School  of Technology,  Nerul, Navi Mumbai (Elec)</option>
+<option value="Don Bosco Institute of Technology, Mumbai (Comp)">Don Bosco Institute of Technology, Mumbai (Comp)</option>
+<option value="Don Bosco Institute of Technology, Mumbai (IT)">Don Bosco Institute of Technology, Mumbai (IT)</option>
+<option value="Don Bosco Institute of Technology, Mumbai (ENTC)">Don Bosco Institute of Technology, Mumbai (ENTC)</option>
+<option value="Don Bosco Institute of Technology, Mumbai (Mech)">Don Bosco Institute of Technology, Mumbai (Mech)</option>
+<option value="Don Bosco Institute of Technology, Mumbai (Elec)">Don Bosco Institute of Technology, Mumbai (Elec)</option>
+<option value="All  India  Shri Shivaji Memorial  Society's  Institute of  Information Technology,Pune (Comp)">All  India  Shri Shivaji Memorial  Society's  Institute of  Information Technology,Pune (Comp)</option>
+<option value="All  India  Shri Shivaji Memorial  Society's  Institute of  Information Technology,Pune (IT)">All  India  Shri Shivaji Memorial  Society's  Institute of  Information Technology,Pune (IT)</option>
+<option value="All  India  Shri Shivaji Memorial  Society's  Institute of  Information Technology,Pune (ENTC)">All  India  Shri Shivaji Memorial  Society's  Institute of  Information Technology,Pune (ENTC)</option>
+<option value="All  India  Shri Shivaji Memorial  Society's  Institute of  Information Technology,Pune (Mech)">All  India  Shri Shivaji Memorial  Society's  Institute of  Information Technology,Pune (Mech)</option>
+<option value="All  India  Shri Shivaji Memorial  Society's  Institute of  Information Technology,Pune (Elec)">All  India  Shri Shivaji Memorial  Society's  Institute of  Information Technology,Pune (Elec)</option>
+<option value="Progressive Education Society's  Modern College of  Engineering,  Pune (Comp)">Progressive Education Society's  Modern College of  Engineering,  Pune (Comp)</option>
+<option value="Progressive Education Society's  Modern College of  Engineering,  Pune (IT)">Progressive Education Society's  Modern College of  Engineering,  Pune (IT)</option>
+<option value="Progressive Education Society's  Modern College of  Engineering,  Pune (ENTC)">Progressive Education Society's  Modern College of  Engineering,  Pune (ENTC)</option>
+<option value="Progressive Education Society's  Modern College of  Engineering,  Pune (Mech)">Progressive Education Society's  Modern College of  Engineering,  Pune (Mech)</option>
+<option value="Progressive Education Society's  Modern College of  Engineering,  Pune (Elec)">Progressive Education Society's  Modern College of  Engineering,  Pune (Elec)</option>
+<option value="Marathwada  Mitra  Mandal's  College of  Engineering,  Karvenagar, Pune (Comp)">Marathwada  Mitra  Mandal's  College of  Engineering,  Karvenagar, Pune (Comp)</option>
+<option value="Marathwada  Mitra  Mandal's  College of  Engineering,  Karvenagar, Pune (IT)">Marathwada  Mitra  Mandal's  College of  Engineering,  Karvenagar, Pune (IT)</option>
+<option value="Marathwada  Mitra  Mandal's  College of  Engineering,  Karvenagar, Pune (ENTC)">Marathwada  Mitra  Mandal's  College of  Engineering,  Karvenagar, Pune (ENTC)</option>
+<option value="Marathwada  Mitra  Mandal's  College of  Engineering,  Karvenagar, Pune (Mech)">Marathwada  Mitra  Mandal's  College of  Engineering,  Karvenagar, Pune (Mech)</option>
+<option value="Marathwada  Mitra  Mandal's  College of  Engineering,  Karvenagar, Pune (Elec)">Marathwada  Mitra  Mandal's  College of  Engineering,  Karvenagar, Pune (Elec)</option>
+<option value="K.  K.  Wagh Institute of Engineering  Education and  Research, Nashik (Comp)">K.  K.  Wagh Institute of Engineering  Education and  Research, Nashik (Comp)</option>
+<option value="K.  K.  Wagh Institute of Engineering  Education and  Research, Nashik (IT)">K.  K.  Wagh Institute of Engineering  Education and  Research, Nashik (IT)</option>
+<option value="K.  K.  Wagh Institute of Engineering  Education and  Research, Nashik (ENTC)">K.  K.  Wagh Institute of Engineering  Education and  Research, Nashik (ENTC)</option>
+<option value="K.  K.  Wagh Institute of Engineering  Education and  Research, Nashik (Mech)">K.  K.  Wagh Institute of Engineering  Education and  Research, Nashik (Mech)</option>
+<option value="K.  K.  Wagh Institute of Engineering  Education and  Research, Nashik (Elec)">K.  K.  Wagh Institute of Engineering  Education and  Research, Nashik (Elec)</option>
+<option value="Sinhgad  College of  Engineering,  Vadgaon (BK), Pune (Comp)">Sinhgad  College of  Engineering,  Vadgaon (BK), Pune (Comp)</option>
+<option value="Sinhgad  College of  Engineering,  Vadgaon (BK), Pune (IT)">Sinhgad  College of  Engineering,  Vadgaon (BK), Pune (IT)</option>
+<option value="Sinhgad  College of  Engineering,  Vadgaon (BK), Pune (ENTC)">Sinhgad  College of  Engineering,  Vadgaon (BK), Pune (ENTC)</option>
+<option value="Sinhgad  College of  Engineering,  Vadgaon (BK), Pune (Mech)">Sinhgad  College of  Engineering,  Vadgaon (BK), Pune (Mech)</option>
+<option value="Sinhgad  College of  Engineering,  Vadgaon (BK), Pune (Elec)">Sinhgad  College of  Engineering,  Vadgaon (BK), Pune (Elec)</option>
+<option value="Vidyavardhini's  College of  Engineering  and  Technology,  Vasai (Comp)">Vidyavardhini's  College of  Engineering  and  Technology,  Vasai (Comp)</option>
+<option value="Vidyavardhini's  College of  Engineering  and  Technology,  Vasai (IT)">Vidyavardhini's  College of  Engineering  and  Technology,  Vasai (IT)</option>
+<option value="Vidyavardhini's  College of  Engineering  and  Technology,  Vasai (ENTC)">Vidyavardhini's  College of  Engineering  and  Technology,  Vasai (ENTC)</option>
+<option value="Vidyavardhini's  College of  Engineering  and  Technology,  Vasai (Mech)">Vidyavardhini's  College of  Engineering  and  Technology,  Vasai (Mech)</option>
+<option value="Vidyavardhini's  College of  Engineering  and  Technology,  Vasai (Elec)">Vidyavardhini's  College of  Engineering  and  Technology,  Vasai (Elec)</option>
+<option value="Government  College of  Engineering, Jalgaon (Comp)">Government  College of  Engineering, Jalgaon (Comp)</option>
+<option value="Government  College of  Engineering, Jalgaon (IT)">Government  College of  Engineering, Jalgaon (IT)</option>
+<option value="Government  College of  Engineering, Jalgaon (ENTC)">Government  College of  Engineering, Jalgaon (ENTC)</option>
+<option value="Government  College of  Engineering, Jalgaon (Mech)">Government  College of  Engineering, Jalgaon (Mech)</option>
+<option value="Government  College of  Engineering, Jalgaon (Elec)">Government  College of  Engineering, Jalgaon (Elec)</option>
+<option value="Yeshwantrao Chavan College of  Engineering,Wanadongri, Nagpur (Comp)">Yeshwantrao Chavan College of  Engineering,Wanadongri, Nagpur (Comp)</option>
+<option value="Yeshwantrao Chavan College of  Engineering,Wanadongri, Nagpur (IT)">Yeshwantrao Chavan College of  Engineering,Wanadongri, Nagpur (IT)</option>
+<option value="Yeshwantrao Chavan College of  Engineering,Wanadongri, Nagpur (ENTC)">Yeshwantrao Chavan College of  Engineering,Wanadongri, Nagpur (ENTC)</option>
+<option value="Yeshwantrao Chavan College of  Engineering,Wanadongri, Nagpur (Mech)">Yeshwantrao Chavan College of  Engineering,Wanadongri, Nagpur (Mech)</option>
+<option value="Yeshwantrao Chavan College of  Engineering,Wanadongri, Nagpur (Elec)">Yeshwantrao Chavan College of  Engineering,Wanadongri, Nagpur (Elec)</option>
+<option value="Bharati  Vidyapeeth College of Engineering,  Navi Mumbai (Comp)">Bharati  Vidyapeeth College of Engineering,  Navi Mumbai (Comp)</option>
+<option value="Bharati  Vidyapeeth College of Engineering,  Navi Mumbai (IT)">Bharati  Vidyapeeth College of Engineering,  Navi Mumbai (IT)</option>
+<option value="Bharati  Vidyapeeth College of Engineering,  Navi Mumbai (ENTC)">Bharati  Vidyapeeth College of Engineering,  Navi Mumbai (ENTC)</option>
+<option value="Bharati  Vidyapeeth College of Engineering,  Navi Mumbai (Mech)">Bharati  Vidyapeeth College of Engineering,  Navi Mumbai (Mech)</option>
+<option value="Bharati  Vidyapeeth College of Engineering,  Navi Mumbai (Elec)">Bharati  Vidyapeeth College of Engineering,  Navi Mumbai (Elec)</option>
+<option value="Atharva  College of  Engineering,Malad(West),Mumbai (Comp)">Atharva  College of  Engineering,Malad(West),Mumbai (Comp)</option>
+<option value="Atharva  College of  Engineering,Malad(West),Mumbai (IT)">Atharva  College of  Engineering,Malad(West),Mumbai (IT)</option>
+<option value="Atharva  College of  Engineering,Malad(West),Mumbai (ENTC)">Atharva  College of  Engineering,Malad(West),Mumbai (ENTC)</option>
+<option value="Atharva  College of  Engineering,Malad(West),Mumbai (Mech)">Atharva  College of  Engineering,Malad(West),Mumbai (Mech)</option>
+<option value="Atharva  College of  Engineering,Malad(West),Mumbai (Elec)">Atharva  College of  Engineering,Malad(West),Mumbai (Elec)</option>
+<option value="K. E.  Society's  Rajarambapu Institute of Technology, Walwa, Sangli (Comp)">K. E.  Society's  Rajarambapu Institute of Technology, Walwa, Sangli (Comp)</option>
+<option value="K. E.  Society's  Rajarambapu Institute of Technology, Walwa, Sangli (IT)">K. E.  Society's  Rajarambapu Institute of Technology, Walwa, Sangli (IT)</option>
+<option value="K. E.  Society's  Rajarambapu Institute of Technology, Walwa, Sangli (ENTC)">K. E.  Society's  Rajarambapu Institute of Technology, Walwa, Sangli (ENTC)</option>
+<option value="K. E.  Society's  Rajarambapu Institute of Technology, Walwa, Sangli (Mech)">K. E.  Society's  Rajarambapu Institute of Technology, Walwa, Sangli (Mech)</option>
+<option value="K. E.  Society's  Rajarambapu Institute of Technology, Walwa, Sangli (Elec)">K. E.  Society's  Rajarambapu Institute of Technology, Walwa, Sangli (Elec)</option>
+<option value="Rizvi Education Society's  Rizvi College of Engineering,  Bandra,Mumbai (Comp)">Rizvi Education Society's  Rizvi College of Engineering,  Bandra,Mumbai (Comp)</option>
+<option value="Rizvi Education Society's  Rizvi College of Engineering,  Bandra,Mumbai (IT)">Rizvi Education Society's  Rizvi College of Engineering,  Bandra,Mumbai (IT)</option>
+<option value="Rizvi Education Society's  Rizvi College of Engineering,  Bandra,Mumbai (ENTC)">Rizvi Education Society's  Rizvi College of Engineering,  Bandra,Mumbai (ENTC)</option>
+<option value="Rizvi Education Society's  Rizvi College of Engineering,  Bandra,Mumbai (Mech)">Rizvi Education Society's  Rizvi College of Engineering,  Bandra,Mumbai (Mech)</option>
+<option value="Rizvi Education Society's  Rizvi College of Engineering,  Bandra,Mumbai (Elec)">Rizvi Education Society's  Rizvi College of Engineering,  Bandra,Mumbai (Elec)</option>
+<option value="Mahatma  Education Society's  Pillai  College of  Engineering,  New  Panvel (Comp)">Mahatma  Education Society's  Pillai  College of  Engineering,  New  Panvel (Comp)</option>
+<option value="Mahatma  Education Society's  Pillai  College of  Engineering,  New  Panvel (IT)">Mahatma  Education Society's  Pillai  College of  Engineering,  New  Panvel (IT)</option>
+<option value="Mahatma  Education Society's  Pillai  College of  Engineering,  New  Panvel (ENTC)">Mahatma  Education Society's  Pillai  College of  Engineering,  New  Panvel (ENTC)</option>
+<option value="Mahatma  Education Society's  Pillai  College of  Engineering,  New  Panvel (Mech)">Mahatma  Education Society's  Pillai  College of  Engineering,  New  Panvel (Mech)</option>
+<option value="Mahatma  Education Society's  Pillai  College of  Engineering,  New  Panvel (Elec)">Mahatma  Education Society's  Pillai  College of  Engineering,  New  Panvel (Elec)</option>
+<option value="N.Y.S.S.'s  Datta  Meghe College of  Engineering,  Airoli, Navi  Mumbai (Comp)">N.Y.S.S.'s  Datta  Meghe College of  Engineering,  Airoli, Navi  Mumbai (Comp)</option>
+<option value="N.Y.S.S.'s  Datta  Meghe College of  Engineering,  Airoli, Navi  Mumbai (IT)">N.Y.S.S.'s  Datta  Meghe College of  Engineering,  Airoli, Navi  Mumbai (IT)</option>
+<option value="N.Y.S.S.'s  Datta  Meghe College of  Engineering,  Airoli, Navi  Mumbai (ENTC)">N.Y.S.S.'s  Datta  Meghe College of  Engineering,  Airoli, Navi  Mumbai (ENTC)</option>
+<option value="N.Y.S.S.'s  Datta  Meghe College of  Engineering,  Airoli, Navi  Mumbai (Mech)">N.Y.S.S.'s  Datta  Meghe College of  Engineering,  Airoli, Navi  Mumbai (Mech)</option>
+<option value="N.Y.S.S.'s  Datta  Meghe College of  Engineering,  Airoli, Navi  Mumbai (Elec)">N.Y.S.S.'s  Datta  Meghe College of  Engineering,  Airoli, Navi  Mumbai (Elec)</option>
+<option value="Terna  Engineering  College, Nerul, Navi  Mumbai (Comp)">Terna  Engineering  College, Nerul, Navi  Mumbai (Comp)</option>
+<option value="Terna  Engineering  College, Nerul, Navi  Mumbai (IT)">Terna  Engineering  College, Nerul, Navi  Mumbai (IT)</option>
+<option value="Terna  Engineering  College, Nerul, Navi  Mumbai (ENTC)">Terna  Engineering  College, Nerul, Navi  Mumbai (ENTC)</option>
+<option value="Terna  Engineering  College, Nerul, Navi  Mumbai (Mech)">Terna  Engineering  College, Nerul, Navi  Mumbai (Mech)</option>
+<option value="Terna  Engineering  College, Nerul, Navi  Mumbai (Elec)">Terna  Engineering  College, Nerul, Navi  Mumbai (Elec)</option>
+
+
+  </select>
+  <script>
+    new MultiSelectTag('countries')  // id
+</script>
+  </div>
+</div>   
+
+        <!-- /College Type
+
+        <!-- Round -->
+        <!-- <div class="col-12 col-md-6"> -->
+          <div class="form-group">
+            <h3 class="h3 me-3 ">Filter by</h3>
+            <div class="d-flex justify-content-start">
+              <div class="form-check me-3">
+                <input class="form-check-input" type="radio" name="round" value="R1" id="R1" checked>
+                <label class="form-check-label" for="R1">
+                  Opening Rank (CapR1)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="round" value="R2"
+                  id="R2">
+                <label class="form-check-label" for="R2">
+                  Closing Rank (CapR2)
+                </label>
+              </div>
+            </div>
+          </div>
+          <p class="pt-0.5"></p>
+            <a href="index.html" class="font-bold">PREDICTOR</a>
+        </div>
+        <!-- /Round -->
+
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-primary btn-lg" style="color:#333333; padding-bottom: 1rem;" onclick="onSubmit()">Predict My Colleges</button>
+        </div>
+
+      </div> <!-- Row -->
+    </div> <!-- /Container -->
+
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 pt-4">
+          <h3>Showing <span class="fw-bold text-danger" id="collegeCount">-</span> eligible options</h3>
+          <!-- <h3>Showing <span class="fw-bold text-danger" id="collegeCount">-</span> eligible options</h3> -->
+          <p class="">This data is taken from official CET cell Website</p>
+          <p class="" id="ifHomeState"></p>
+        </div>
+        </div>
+        <div class="col-12">
+          <div class="card table-responsive">
+            <table class="table table-responsive table-sm table-nowrap">
+              <thead>
+                <tr>
+                  <th scope="col">College</th>
+                  <th scope="col">City</th>
+                  <th scope="col">Branch</th>
+                  <th scope="col">Opening Rank</th>
+                  <!-- <th scope="col">Quota</th> -->
+                  <th scope="col">Closing Rank</th>
+                  <!-- <th scope="col">Type</th> -->
+                  <th scope="col">Category</th>
+                  <th scope="col">Campus</th>
+                  <th scope="col">NAAC rating</th>
+                </tr>
+              </thead>
+              <tbody id="collegeTable">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- /Main Content -->
+
+  <!-- JAVASCRIPT -->
+  <!-- Vendor JS -->
+  <script src="./vendor.bundle.js"></script>
+
+  <!-- Theme JS -->
+  <script src="./theme.bundle.js"></script>
+
+  <script src="./jquery-3.5.1.js"></script>
+  <script>
+    
+    
+
+    function onSubmit() {
+      populateCollegesToTable();
+    }
+
+    let programMaps = {
+      "Aerospace": [
+        "Aerospace Engineering (4 Years, Bachelor of Technology)"
+      ],
+      "Agricultural": [
+        "Agricultural Engineering (4 Years, Bachelor of Technology)"
+      ],
+      "Architecture": [
+        "Architecture (5 Years, Bachelor of Architecture)"
+      ],
+      "AI": [
+        "Artificial Intelligence (4 Years, Bachelor of Technology)",
+        "Artificial Intelligence and Data Science (4 Years, Bachelor of Technology)",
+        "Data Science and Artificial Intelligence (4 Years, Bachelor of Technology)"
+      ],
+      "Biomedical": [
+        "Bio Medical Engineering (4 Years, Bachelor of Technology)",
+        "Biomedical Engineering (4 Years, Bachelor of Technology)"
+      ],
+      "Biotechnology": [
+        "Bio Technology (4 Years, Bachelor of Technology)",
+        "Biotechnology (5 Years, Bachelor and Master of Technology (Dual Degree))",
+        "Biotechnology and Biochemical Engineering (4 Years, Bachelor of Technology)"
+      ],
+      "Textile Technology": [
+        "Carpet and Textile Technology (4 Years, Bachelor of Technology)",
+        "Handloom and Textile Technology (4 Years, Bachelor of Technology)"
+      ],
+      "Ceramic": [
+        "Ceramic Engineering (4 Years, Bachelor of Technology)",
+        "Ceramic Engineering and M.Tech Industrial Ceramic (5 Years, Bachelor and Master of Technology (Dual Degree))"
+      ],
+      "Chemical": [
+        "Chemical Engineering (4 Years, Bachelor of Technology)",
+        "Chemical Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))",
+        "Chemical Engineering (5 Years, Integrated Masters in Technology)"
+      ],
+      "Chemistry(Bsc/Msc)": [
+        "Chemistry (5 Years, Bachelor of Science and Master of Science (Dual Degree))",
+        "Chemistry (5 Years, Integrated Master of Science)"
+      ],
+      "Civil": [
+        "Civil Engineering (4 Years, Bachelor of Technology)"
+      ],
+      "Computational": [
+        "Computational Mathematics (5 Years, Bachelor and Master of Technology (Dual Degree))"
+      ],
+      "CSE": [
+        "Computer Engineering (4 Years, Bachelor of Technology)",
+        "Computer Science (4 Years, Bachelor of Technology)",
+        "Computer Science (5 Years, Integrated Master of Technology)",
+        "Computer Science & Engineering (5 Years, B.Tech. + M.Tech./MS (Dual Degree))",
+        "Computer Science and Artificial Intelligence (4 Years, Bachelor of Technology)",
+        "Computer Science and Business (4 Years, Bachelor of Technology)",
+        "Computer Science and Engineering (4 Years, Bachelor of Technology)",
+        "Computer Science and Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))",
+        "Computer Science and Engineering (with Specialization of Data Science and Artificial Intelligence) (4 Years, B. Tech / B. Tech (Hons.))",
+        "Computer Science and Engineering with Major in Artificial Intelligence (4 Years, Bachelor of Technology)",
+        "Computer Science and Engineering with specialization in Cyber Security (4 Years, Bachelor of Technology)",
+        "Computer Science Engineering (Artificial Intelligence) (4 Years, B. Tech / B. Tech (Hons.))",
+        "Computer Science Engineering (Data Science) (4 Years, B. Tech / B. Tech (Hons.))"
+      ],
+      "EEE": [
+        "Electrical and Electronics Engineering (4 Years, Bachelor of Technology)"
+      ],
+      "Instrumentation": [
+        "Electrical and Instrumentation Engineering (4 Years, Bachelor of Technology)",
+        "Electronics and Instrumentation Engineering (4 Years, Bachelor of Technology)"
+      ],
+      "Electrical": [
+        "Electrical Engineering (4 Years, Bachelor of Technology)"
+      ],
+      "ECE": [
+        "Electronics & Communication Engineering (5 Years, B.Tech. + M.Tech./MS (Dual Degree))",
+        "Electronics and Communication Engineering (4 Years, Bachelor of Technology)",
+        "Electronics and Communication Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))",
+        "Electronics and Communication Engineering (with Specialization of Embedded Systems and Internet of Things) (4 Years, B. Tech / B. Tech (Hons.))",
+        "Electronics and Communication Engineering with specialization in Design and Manufacturing (4 Years, Bachelor of Technology)"
+      ],
+      "Electronics": [
+        "Electronics and Telecommunication Engineering (4 Years, Bachelor of Technology)",
+        "Electronics System Engineering (4 Years, Bachelor of Technology)"
+      ],
+      "Energy": [
+        "Energy Engineering (4 Years, Bachelor of Technology)"
+      ],
+      "Engineering Physics": [
+        "Engineering Physics (4 Years, Bachelor of Technology)",
+        "Engineering Physics (5 Years, Bachelor and Master of Technology (Dual Degree))"
+      ],
+      "Food Process Engineering": [
+        "Food Engineering and Technology (4 Years, Bachelor of Technology)",
+        "Food Process Engineering (4 Years, Bachelor of Technology)",
+        "Food Technology (4 Years, Bachelor of Technology)",
+        "Food Technology (5 Years, Integrated Master of Science)",
+        "Food Technology and Management (4 Years, Bachelor of Technology)"
+      ],
+      "Industrial Production": [
+        "Industrial and Production Engineering (4 Years, Bachelor of Technology)"
+      ],
+      "Industrial": [
+        "Industrial Design (4 Years, Bachelor of Technology)"
+      ],
+      "IT": [
+        "Information Technology (4 Years, Bachelor of Technology)"
+      ]
+    }
+
+    let colleges = [
+    
+      {
+    "instituteName": "Veermata  Jijabai Technological  Institute(VJTI), Matunga,  Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 88,
+    "CompGOBCS": 303,
+    "CompGSTS": 7076,
+    "CompLOPENS": 62,
+    "CompLOBCS": 665,
+    "CompLSTS": 10854,
+    "ITGOPENS": 169,
+    "ITGOBCS": 540,
+    "ITGSTS": 12014,
+    "ITLOPENS": 318,
+    "ITLOBCS": 938,
+    "ITLSTS": 23549,
+    "ENTCGOPENS": 497,
+    "ENTCGOBCS": 864,
+    "ENTCGSTS": 19910,
+    "ENTCLOPENS": 918,
+    "ENTCLOBCS": 2206,
+    "ENTCLSTS": 29411,
+    "MechGOPENS": 1175,
+    "MechGOBCS": 1866,
+    "MechGSTS": 25465,
+    "MechLOPENS": 2399,
+    "MechLOBCS": 3891,
+    "MechLSTS": 40502,
+    "ElecGOPENS": 1333,
+    "ElecGOBCS": 1807,
+    "ElecGSTS": 24462,
+    "ElecLOPENS": 2233,
+    "ElecLOBCS": 3782,
+    "ElecLSTS": 14140,
+    "CompGOPENS2": 91,
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": "",
+    "CompLOBCS2": 693,
+    "CompLSTS2": "",
+    "ITGOPENS2": 205,
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": 325,
+    "ITLOBCS2": 1047,
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 464,
+    "ENTCGOBCS2": 26694,
+    "ENTCGSTS2": 26694,
+    "ENTCLOPENS2": 1100,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": 23530,
+    "MechGOPENS2": 1287,
+    "MechGOBCS2": 2135,
+    "MechGSTS2": 29863,
+    "MechLOPENS2": 2454,
+    "MechLOBCS2": "",
+    "MechLSTS2": 71717,
+    "ElecGOPENS2": 1686,
+    "ElecGOBCS2": 2183,
+    "ElecGSTS2": 30262,
+    "ElecLOPENS2": 2236,
+    "ElecLOBCS2": 4096,
+    "ElecLSTS2": 38790,
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A++",
+    "link": "https://vjti.ac.in/admissions/"
+  },
+  {
+    "instituteName": "College of Engineering,  Pune",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": 90,
+    "CompGOBCS": 188,
+    "CompGSTS": 6555,
+    "CompLOPENS": 185,
+    "CompLOBCS": 453,
+    "CompLSTS": 5082,
+    "ITGOPENS": "",
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": "",
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 285,
+    "ENTCGOBCS": 520,
+    "ENTCGSTS": 13385,
+    "ENTCLOPENS": 476,
+    "ENTCLOBCS": 872,
+    "ENTCLSTS": 14423,
+    "MechGOPENS": 828,
+    "MechGOBCS": 1394,
+    "MechGSTS": 21264,
+    "MechLOPENS": 1504,
+    "MechLOBCS": 3043,
+    "MechLSTS": 37033,
+    "ElecGOPENS": 812,
+    "ElecGOBCS": 1145,
+    "ElecGSTS": 12849,
+    "ElecLOPENS": 1573,
+    "ElecLOBCS": 2547,
+    "ElecLSTS": 22765,
+    "CompGOPENS2": 123,
+    "CompGOBCS2": 230,
+    "CompGSTS2": 7235,
+    "CompLOPENS2": 232,
+    "CompLOBCS2": "",
+    "CompLSTS2": 5082,
+    "ITGOPENS2": "",
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": "",
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 354,
+    "ENTCGOBCS2": 572,
+    "ENTCGSTS2": 17132,
+    "ENTCLOPENS2": 530,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": 14423,
+    "MechGOPENS2": 970,
+    "MechGOBCS2": 1556,
+    "MechGSTS2": 26802,
+    "MechLOPENS2": 1748,
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": 665,
+    "ElecGOBCS2": 976,
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A++",
+    "link": "https://www.coep.org.in/admissions"
+  },
+  {
+    "instituteName": "Bhartiya  Vidya  Bhavan's  Sardar  Patel  Institute of Technology  ,  Andheri, Mumbai",
+    "university": "Mumbai",
+    "City": "Andheri,  Mumbai",
+    "CompGOPENS": 238,
+    "CompGOBCS": 592,
+    "CompGSTS": 10259,
+    "CompLOPENS": 347,
+    "CompLOBCS": 1468,
+    "CompLSTS": 26459,
+    "ITGOPENS": 387,
+    "ITGOBCS": 1012,
+    "ITGSTS": 14277,
+    "ITLOPENS": 593,
+    "ITLOBCS": 1851,
+    "ITLSTS": 29023,
+    "ENTCGOPENS": 1351,
+    "ENTCGOBCS": 2297,
+    "ENTCGSTS": 36161,
+    "ENTCLOPENS": 1764,
+    "ENTCLOBCS": 2634,
+    "ENTCLSTS": 38412,
+    "MechGOPENS": "",
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 258,
+    "CompGOBCS2": 781,
+    "CompGSTS2": 14277,
+    "CompLOPENS2": 360,
+    "CompLOBCS2": "",
+    "CompLSTS2": 24917,
+    "ITGOPENS2": 373,
+    "ITGOBCS2": 1032,
+    "ITGSTS2": 18855,
+    "ITLOPENS2": "",
+    "ITLOBCS2": "",
+    "ITLSTS2": 29023,
+    "ENTCGOPENS2": 1631,
+    "ENTCGOBCS2": 1878,
+    "ENTCGSTS2": 34152,
+    "ENTCLOPENS2": 2392,
+    "ENTCLOBCS2": 3618,
+    "ENTCLSTS2": "",
+    "MechGOPENS2": "",
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": "",
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Medium",
+    "naac": "A",
+    "link": "https://www.spit.ac.in/admissions/"
+  },
+  {
+    "instituteName": "Pune Institute of  Computer Technology,  Dhankavdi, Pune",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": 546,
+    "CompGOBCS": 1106,
+    "CompGSTS": 12232,
+    "CompLOPENS": 691,
+    "CompLOBCS": 1438,
+    "CompLSTS": 12072,
+    "ITGOPENS": 1183,
+    "ITGOBCS": 1741,
+    "ITGSTS": 28071,
+    "ITLOPENS": 1375,
+    "ITLOBCS": 1952,
+    "ITLSTS": 38601,
+    "ENTCGOPENS": 2408,
+    "ENTCGOBCS": 3097,
+    "ENTCGSTS": 57883,
+    "ENTCLOPENS": 3706,
+    "ENTCLOBCS": 5444,
+    "ENTCLSTS": 48574,
+    "MechGOPENS": "",
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 598,
+    "CompGOBCS2": "",
+    "CompGSTS2": 19110,
+    "CompLOPENS2": 835,
+    "CompLOBCS2": 1144,
+    "CompLSTS2": 32574,
+    "ITGOPENS2": 1242,
+    "ITGOBCS2": 1636,
+    "ITGSTS2": 22243,
+    "ITLOPENS2": 1376,
+    "ITLOBCS2": 1488,
+    "ITLSTS2": 9299,
+    "ENTCGOPENS2": 2693,
+    "ENTCGOBCS2": 3468,
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 4227,
+    "ENTCLOBCS2": 6303,
+    "ENTCLSTS2": "",
+    "MechGOPENS2": "",
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": "",
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Medium",
+    "naac": "A",
+    "link": "https://pict.edu/admission-ug/"
+  },
+  {
+    "instituteName": "Shri Vile Parle Kelvani Mandal's  Dwarkadas  J. Sanghvi College of  Engineering,  Vile  Parle,Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 933,
+    "CompGOBCS": "",
+    "CompGSTS": "",
+    "CompLOPENS": 1168,
+    "CompLOBCS": "",
+    "CompLSTS": "",
+    "ITGOPENS": 1650,
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": 1845,
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 4180,
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 5209,
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": 5919,
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 772,
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": "",
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": 1395,
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": 799,
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 4803,
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 5964,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 7736,
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": 10280,
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Small",
+    "naac": "A",
+    "link": "https://www.djsce.ac.in/Admissions/M__2"
+  },
+  {
+    "instituteName": "Walchand  College of  Engineering,  Sangli",
+    "university": "Shivaji",
+    "City": "Sangli",
+    "CompGOPENS": 1096,
+    "CompGOBCS": 1423,
+    "CompGSTS": 24146,
+    "CompLOPENS": 1560,
+    "CompLOBCS": 2656,
+    "CompLSTS": 30315,
+    "ITGOPENS": 1604,
+    "ITGOBCS": 1806,
+    "ITGSTS": 27813,
+    "ITLOPENS": 2195,
+    "ITLOBCS": 3200,
+    "ITLSTS": 69055,
+    "ENTCGOPENS": "",
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": "",
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": 3209,
+    "MechGOBCS": 4326,
+    "MechGSTS": 60721,
+    "MechLOPENS": 5717,
+    "MechLOBCS": 9116,
+    "MechLSTS": 72815,
+    "ElecGOPENS": 4245,
+    "ElecGOBCS": 5072,
+    "ElecGSTS": 36471,
+    "ElecLOPENS": 4956,
+    "ElecLOBCS": 8904,
+    "ElecLSTS": 45010,
+    "CompGOPENS2": 1171,
+    "CompGOBCS2": 1624,
+    "CompGSTS2": "",
+    "CompLOPENS2": "",
+    "CompLOBCS2": 2708,
+    "CompLSTS2": 41501,
+    "ITGOPENS2": 1650,
+    "ITGOBCS2": 1920,
+    "ITGSTS2": 8374,
+    "ITLOPENS2": "",
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": "",
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": "",
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 4140,
+    "MechGOBCS2": 5191,
+    "MechGSTS2": 86037,
+    "MechLOPENS2": 5798,
+    "MechLOBCS2": 9621,
+    "MechLSTS2": "",
+    "ElecGOPENS2": 4770,
+    "ElecGOBCS2": 5608,
+    "ElecGSTS2": 70397,
+    "ElecLOPENS2": 5796,
+    "ElecLOBCS2": 6048,
+    "ElecLSTS2": 72661,
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A++",
+    "link": "http://www.walchandsangli.ac.in/Admissions.asp"
+  },
+  {
+    "instituteName": "Bansilal  Ramnath Agarawal  Charitable Trust's  Vishwakarma  Institute of Technology,  Bibwewadi, Pune",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": 1302,
+    "CompGOBCS": 1715,
+    "CompGSTS": 25188,
+    "CompLOPENS": 1657,
+    "CompLOBCS": 2582,
+    "CompLSTS": 27005,
+    "ITGOPENS": 1675,
+    "ITGOBCS": 1914,
+    "ITGSTS": 29898,
+    "ITLOPENS": 2093,
+    "ITLOBCS": 2880,
+    "ITLSTS": "",
+    "ENTCGOPENS": 4070,
+    "ENTCGOBCS": 5304,
+    "ENTCGSTS": 76185,
+    "ENTCLOPENS": 5441,
+    "ENTCLOBCS": 5980,
+    "ENTCLSTS": 61012,
+    "MechGOPENS": 5509,
+    "MechGOBCS": 7154,
+    "MechGSTS": 50350,
+    "MechLOPENS": 9551,
+    "MechLOBCS": 13104,
+    "MechLSTS": 61219,
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 1343,
+    "CompGOBCS2": 1859,
+    "CompGSTS2": 11414,
+    "CompLOPENS2": "",
+    "CompLOBCS2": 1764,
+    "CompLSTS2": 30512,
+    "ITGOPENS2": 1679,
+    "ITGOBCS2": 2146,
+    "ITGSTS2": 32673,
+    "ITLOPENS2": 2373,
+    "ITLOBCS2": 2872,
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 4671,
+    "ENTCGOBCS2": 5848,
+    "ENTCGSTS2": 45522,
+    "ENTCLOPENS2": 5980,
+    "ENTCLOBCS2": 7765,
+    "ENTCLSTS2": 61219,
+    "MechGOPENS2": 6683,
+    "MechGOBCS2": 8638,
+    "MechGSTS2": 39195,
+    "MechLOPENS2": 11256,
+    "MechLOBCS2": 16548,
+    "MechLSTS2": 49638,
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Medium",
+    "naac": "A+",
+    "link": "https://www.vit.edu/index.php/admissions/undergraduate-b-tech/courses-sanctioned-intake"
+  },
+  {
+    "instituteName": "Pimpri Chinchwad  Education Trust,  Pimpri Chinchwad  College of Engineering,  Pune",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": 2331,
+    "CompGOBCS": 2676,
+    "CompGSTS": 36460,
+    "CompLOPENS": 3177,
+    "CompLOBCS": 4364,
+    "CompLSTS": 46023,
+    "ITGOPENS": 3348,
+    "ITGOBCS": 3569,
+    "ITGSTS": 43209,
+    "ITLOPENS": 4450,
+    "ITLOBCS": 5574,
+    "ITLSTS": 73106,
+    "ENTCGOPENS": 6693,
+    "ENTCGOBCS": 7670,
+    "ENTCGSTS": 74300,
+    "ENTCLOPENS": 8266,
+    "ENTCLOBCS": 9715,
+    "ENTCLSTS": 61664,
+    "MechGOPENS": 9122,
+    "MechGOBCS": 11557,
+    "MechGSTS": 58160,
+    "MechLOPENS": 18672,
+    "MechLOBCS": 27254,
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 1986,
+    "CompGOBCS2": 2229,
+    "CompGSTS2": "",
+    "CompLOPENS2": 3058,
+    "CompLOBCS2": 4391,
+    "CompLSTS2": 47936,
+    "ITGOPENS2": 2853,
+    "ITGOBCS2": 3046,
+    "ITGSTS2": 41421,
+    "ITLOPENS2": 4485,
+    "ITLOBCS2": "",
+    "ITLSTS2": 43209,
+    "ENTCGOPENS2": 6912,
+    "ENTCGOBCS2": 7871,
+    "ENTCGSTS2": 30802,
+    "ENTCLOPENS2": 8504,
+    "ENTCLOBCS2": 9530,
+    "ENTCLSTS2": 8186,
+    "MechGOPENS2": 13517,
+    "MechGOBCS2": 13034,
+    "MechGSTS2": 80309,
+    "MechLOPENS2": 16545,
+    "MechLOBCS2": 19777,
+    "MechLSTS2": 11128,
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A",
+    "link": "http://www.pccoepune.com/admission-home.php"
+  },
+  {
+    "instituteName": "MKSSS's  Cummins  College of  Engineering  for  Women, Karvenagar,Pune",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": "",
+    "CompGOBCS": "",
+    "CompGSTS": "",
+    "CompLOPENS": 2483,
+    "CompLOBCS": 3771,
+    "CompLSTS": 56980,
+    "ITGOPENS": "",
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": 3551,
+    "ITLOBCS": 4290,
+    "ITLSTS": 81501,
+    "ENTCGOPENS": "",
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 6786,
+    "ENTCLOBCS": 8751,
+    "ENTCLSTS": 76468,
+    "MechGOPENS": "",
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": 12653,
+    "MechLOBCS": 18443,
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": "",
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": 2125,
+    "CompLOBCS2": 3416,
+    "CompLSTS2": 78645,
+    "ITGOPENS2": "",
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": 3140,
+    "ITLOBCS2": 3491,
+    "ITLSTS2": 3557,
+    "ENTCGOPENS2": "",
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 6989,
+    "ENTCLOBCS2": 7849,
+    "ENTCLSTS2": 7318,
+    "MechGOPENS2": "",
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": 11964,
+    "MechLOBCS2": 18262,
+    "MechLSTS2": 14709,
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Medium",
+    "naac": "A",
+    "link": "https://www.cumminscollege.org/admission/"
+  },
+  {
+    "instituteName": "Thadomal  Shahani Engineering  College, Bandra, Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 2477,
+    "CompGOBCS": "",
+    "CompGSTS": "",
+    "CompLOPENS": 2957,
+    "CompLOBCS": "",
+    "CompLSTS": "",
+    "ITGOPENS": 3344,
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": 3831,
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 7101,
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 6420,
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": "",
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 1988,
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": 2957,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": 3364,
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": 3938,
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 7695,
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 9268,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": "",
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": "",
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Small",
+    "naac": "A++",
+    "link": "https://tsec.edu/"
+  },
+  {
+    "instituteName": "Shri  Ramdeobaba  College of  Engineering  and  Management, Nagpur",
+    "university": "Nagpur",
+    "City": "Nagpur",
+    "CompGOPENS": 2484,
+    "CompGOBCS": "",
+    "CompGSTS": "",
+    "CompLOPENS": 2443,
+    "CompLOBCS": "",
+    "CompLSTS": "",
+    "ITGOPENS": 4306,
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": 5213,
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 7380,
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 8281,
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": 11011,
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": 19458,
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": 14135,
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": 13674,
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 1255,
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": "",
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": 3764,
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": "",
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 6753,
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": "",
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 12830,
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": 20540,
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": 16176,
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": 18284,
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A++",
+    "link": "http://www.rknec.edu/"
+  },
+  {
+    "instituteName": "Vivekanand  Education Society's  Institute of Technology, Chembur, Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 2494,
+    "CompGOBCS": "",
+    "CompGSTS": "",
+    "CompLOPENS": 3119,
+    "CompLOBCS": "",
+    "CompLSTS": "",
+    "ITGOPENS": 4678,
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": 5131,
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 8895,
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 9290,
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": "",
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 1158,
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": 3666,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": 3903,
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": 3998,
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 9737,
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 10279,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": "",
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": "",
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Small",
+    "naac": "A+",
+    "link": "https://vesit.ves.ac.in/"
+  },
+  {
+    "instituteName": "B.R.A.C.T's  Vishwakarma  Institute of Information Technology,  Kondhwa  (Bk.), Pune",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": 3011,
+    "CompGOBCS": 3669,
+    "CompGSTS": 38109,
+    "CompLOPENS": 4485,
+    "CompLOBCS": 5296,
+    "CompLSTS": 86409,
+    "ITGOPENS": 4331,
+    "ITGOBCS": 4930,
+    "ITGSTS": 64214,
+    "ITLOPENS": 5685,
+    "ITLOBCS": 6725,
+    "ITLSTS": 68468,
+    "ENTCGOPENS": 8690,
+    "ENTCGOBCS": 9940,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 11050,
+    "ENTCLOBCS": 12374,
+    "ENTCLSTS": "",
+    "MechGOPENS": 14195,
+    "MechGOBCS": 18680,
+    "MechGSTS": "",
+    "MechLOPENS": 31055,
+    "MechLOBCS": 54149,
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 1343,
+    "CompGOBCS2": 1859,
+    "CompGSTS2": 11414,
+    "CompLOPENS2": 1764,
+    "CompLOBCS2": 2636,
+    "CompLSTS2": 30512,
+    "ITGOPENS2": 1679,
+    "ITGOBCS2": 2146,
+    "ITGSTS2": 32673,
+    "ITLOPENS2": 2373,
+    "ITLOBCS2": 2872,
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 4671,
+    "ENTCGOBCS2": 5848,
+    "ENTCGSTS2": 45522,
+    "ENTCLOPENS2": 5980,
+    "ENTCLOBCS2": 7765,
+    "ENTCLSTS2": 61219,
+    "MechGOPENS2": 6683,
+    "MechGOBCS2": 8638,
+    "MechGSTS2": 39195,
+    "MechLOPENS2": 11256,
+    "MechLOBCS2": 16548,
+    "MechLSTS2": 49638,
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Medium",
+    "naac": "A",
+    "link": "https://www.vit.edu/"
+  },
+  {
+    "instituteName": "Government  College of  Engineering,  Aurangabad",
+    "university": "BAMU",
+    "City": "Aurangabad",
+    "CompGOPENS": 3427,
+    "CompGOBCS": 3810,
+    "CompGSTS": 34675,
+    "CompLOPENS": 4147,
+    "CompLOBCS": 5065,
+    "CompLSTS": 19888,
+    "ITGOPENS": 5078,
+    "ITGOBCS": 5544,
+    "ITGSTS": 46439,
+    "ITLOPENS": 6259,
+    "ITLOBCS": 6843,
+    "ITLSTS": 80990,
+    "ENTCGOPENS": 8231,
+    "ENTCGOBCS": 9491,
+    "ENTCGSTS": 84379,
+    "ENTCLOPENS": 9873,
+    "ENTCLOBCS": 10712,
+    "ENTCLSTS": 44220,
+    "MechGOPENS": 9077,
+    "MechGOBCS": 10179,
+    "MechGSTS": 45899,
+    "MechLOPENS": 14475,
+    "MechLOBCS": 20574,
+    "MechLSTS": 65526,
+    "ElecGOPENS": 11303,
+    "ElecGOBCS": 12594,
+    "ElecGSTS": 48890,
+    "ElecLOPENS": 14267,
+    "ElecLOBCS": 16670,
+    "ElecLSTS": 39245,
+    "CompGOPENS2": 3565,
+    "CompGOBCS2": 4445,
+    "CompGSTS2": "",
+    "CompLOPENS2": 4240,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": 5580,
+    "ITGOBCS2": 5859,
+    "ITGSTS2": 37862,
+    "ITLOPENS2": 6313,
+    "ITLOBCS2": "",
+    "ITLSTS2": 57330,
+    "ENTCGOPENS2": 9273,
+    "ENTCGOBCS2": 9619,
+    "ENTCGSTS2": 74300,
+    "ENTCLOPENS2": 10142,
+    "ENTCLOBCS2": 12543,
+    "ENTCLSTS2": 64026,
+    "MechGOPENS2": 10663,
+    "MechGOBCS2": 13606,
+    "MechGSTS2": 75507,
+    "MechLOPENS2": 13827,
+    "MechLOBCS2": 23251,
+    "MechLSTS2": 76795,
+    "ElecGOPENS2": 12356,
+    "ElecGOBCS2": 17316,
+    "ElecGSTS2": 64609,
+    "ElecLOPENS2": 17296,
+    "ElecLOBCS2": 20585,
+    "ElecLSTS2": 45010,
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A+",
+    "link": "https://geca.ac.in/"
+  },
+  {
+    "instituteName": "Pune  Vidyarthi Griha's  College of  Engineering  and  Technology  and  G K  Pate(Wani)  Institute of  Management, Pune",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": 3450,
+    "CompGOBCS": 4561,
+    "CompGSTS": 52106,
+    "CompLOPENS": 5095,
+    "CompLOBCS": 6446,
+    "CompLSTS": 25508,
+    "ITGOPENS": 4971,
+    "ITGOBCS": 5721,
+    "ITGSTS": 81879,
+    "ITLOPENS": 6201,
+    "ITLOBCS": 7488,
+    "ITLSTS": 29549,
+    "ENTCGOPENS": 14003,
+    "ENTCGOBCS": 19712,
+    "ENTCGSTS": 69134,
+    "ENTCLOPENS": 15645,
+    "ENTCLOBCS": 21870,
+    "ENTCLSTS": 49592,
+    "MechGOPENS": 16964,
+    "MechGOBCS": 27103,
+    "MechGSTS": 75085,
+    "MechLOPENS": 32930,
+    "MechLOBCS": 42917,
+    "MechLSTS": 54153,
+    "ElecGOPENS": 24343,
+    "ElecGOBCS": 61519,
+    "ElecGSTS": 43327,
+    "ElecLOPENS": 24735,
+    "ElecLOBCS": 40124,
+    "ElecLSTS": "",
+    "CompGOPENS2": 4065,
+    "CompGOBCS2": 4313,
+    "CompGSTS2": 37426,
+    "CompLOPENS2": "",
+    "CompLOBCS2": 6849,
+    "CompLSTS2": "",
+    "ITGOPENS2": 4827,
+    "ITGOBCS2": 6316,
+    "ITGSTS2": "",
+    "ITLOPENS2": "",
+    "ITLOBCS2": 8356,
+    "ITLSTS2": 5308,
+    "ENTCGOPENS2": 17714,
+    "ENTCGOBCS2": 21884,
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 17312,
+    "ENTCLOBCS2": 22664,
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 18277,
+    "MechGOBCS2": 32175,
+    "MechGSTS2": "",
+    "MechLOPENS2": 34233,
+    "MechLOBCS2": 37932,
+    "MechLSTS2": "",
+    "ElecGOPENS2": 28752,
+    "ElecGOBCS2": 50620,
+    "ElecGSTS2": "",
+    "ElecLOPENS2": 31803,
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Medium",
+    "naac": "A",
+    "link": "https://www.pvgcoet.ac.in/"
+  },
+  {
+    "instituteName": "K  J  Somaiya  Institute of  Engineering  and  Information Technology,  Sion, Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 3893,
+    "CompGOBCS": "",
+    "CompGSTS": "",
+    "CompLOPENS": 5177,
+    "CompLOBCS": "",
+    "CompLSTS": "",
+    "ITGOPENS": 5357,
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": 5680,
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 10768,
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 10202,
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": "",
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 5318,
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": 5706,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": 6510,
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": 7170,
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 16879,
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 16714,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": "",
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": "",
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A",
+    "link": "https://kjsit.somaiya.edu.in/"
+  },
+  {
+    "instituteName": "Government  College of  Engineering,  Amravati",
+    "university": "Amravati",
+    "City": "Amravati",
+    "CompGOPENS": 4109,
+    "CompGOBCS": 4671,
+    "CompGSTS": 32442,
+    "CompLOPENS": 3952,
+    "CompLOBCS": 4383,
+    "CompLSTS": 33669,
+    "ITGOPENS": 6194,
+    "ITGOBCS": 6851,
+    "ITGSTS": 38361,
+    "ITLOPENS": 6948,
+    "ITLOBCS": 7926,
+    "ITLSTS": 28410,
+    "ENTCGOPENS": 10626,
+    "ENTCGOBCS": 11529,
+    "ENTCGSTS": 56884,
+    "ENTCLOPENS": 11257,
+    "ENTCLOBCS": 13435,
+    "ENTCLSTS": 50427,
+    "MechGOPENS": 11560,
+    "MechGOBCS": 12848,
+    "MechGSTS": 44560,
+    "MechLOPENS": 21613,
+    "MechLOBCS": 24550,
+    "MechLSTS": 51008,
+    "ElecGOPENS": 13655,
+    "ElecGOBCS": 15448,
+    "ElecGSTS": 58904,
+    "ElecLOPENS": 15527,
+    "ElecLOBCS": 16892,
+    "ElecLSTS": 22693,
+    "CompGOPENS2": 4250,
+    "CompGOBCS2": 4935,
+    "CompGSTS2": 28428,
+    "CompLOPENS2": 3990,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": 6699,
+    "ITGOBCS2": 6957,
+    "ITGSTS2": 39961,
+    "ITLOPENS2": 5135,
+    "ITLOBCS2": 5156,
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 9087,
+    "ENTCGOBCS2": 10401,
+    "ENTCGSTS2": 47845,
+    "ENTCLOPENS2": 10835,
+    "ENTCLOBCS2": 13745,
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 12069,
+    "MechGOBCS2": 15013,
+    "MechGSTS2": 40044,
+    "MechLOPENS2": 22122,
+    "MechLOBCS2": 22130,
+    "MechLSTS2": "",
+    "ElecGOPENS2": 14715,
+    "ElecGOBCS2": 16817,
+    "ElecGSTS2": 40844,
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": 14088,
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Small",
+    "naac": "A+",
+    "link": "https://www.gcoea.ac.in/"
+  },
+  {
+    "instituteName": "Fr.  Conceicao Rodrigues  College of Engineering,  Bandra,Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 4497,
+    "CompGOBCS": "",
+    "CompGSTS": "",
+    "CompLOPENS": 3825,
+    "CompLOBCS": "",
+    "CompLSTS": "",
+    "ITGOPENS": "",
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": "",
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": "",
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": "",
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": 10370,
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": 17294,
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 5174,
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": 4207,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": "",
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": "",
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": "",
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": "",
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 12833,
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": 27341,
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Small",
+    "naac": "A",
+    "link": "http://www.frcrce.ac.in/"
+  },
+  {
+    "instituteName": "Agnel  Charities'  FR. C.  Rodrigues  Institute of Technology, Vashi, Navi Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 4643,
+    "CompGOBCS": "",
+    "CompGSTS": "",
+    "CompLOPENS": 5237,
+    "CompLOBCS": "",
+    "CompLSTS": "",
+    "ITGOPENS": 5520,
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": 5702,
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 11397,
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 10063,
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": 13567,
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": 22184,
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": 13712,
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": 15943,
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 4985,
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": 5497,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": 7018,
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": 6284,
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 17576,
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 13546,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 13989,
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": 41524,
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": 19088,
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": 25127,
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A",
+    "link": "https://fcrit.ac.in/"
+  },
+  {
+    "instituteName": "International  Institute of Information Technology  (I�IT), Pune.",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": 4910,
+    "CompGOBCS": 8608,
+    "CompGSTS": 52869,
+    "CompLOPENS": 8582,
+    "CompLOBCS": 9425,
+    "CompLSTS": 60405,
+    "ITGOPENS": 8247,
+    "ITGOBCS": 9750,
+    "ITGSTS": "",
+    "ITLOPENS": 11279,
+    "ITLOBCS": 12683,
+    "ITLSTS": "",
+    "ENTCGOPENS": 18226,
+    "ENTCGOBCS": 24881,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 16775,
+    "ENTCLOBCS": 17542,
+    "ENTCLSTS": "",
+    "MechGOPENS": "",
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 7017,
+    "CompGOBCS2": 10186,
+    "CompGSTS2": 7197,
+    "CompLOPENS2": 9064,
+    "CompLOBCS2": 9605,
+    "CompLSTS2": "",
+    "ITGOPENS2": 10622,
+    "ITGOBCS2": 12663,
+    "ITGSTS2": "",
+    "ITLOPENS2": 12728,
+    "ITLOBCS2": 17735,
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 23506,
+    "ENTCGOBCS2": 29118,
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 23247,
+    "ENTCLOBCS2": 23024,
+    "ENTCLSTS2": "",
+    "MechGOPENS2": "",
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": "",
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Medium",
+    "naac": "A",
+    "link": "https://www.isquareit.edu.in/"
+  },
+  {
+    "instituteName": "Vidyalankar  Institute of Technology,Wadala,  Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 5115,
+    "CompGOBCS": 7083,
+    "CompGSTS": 20292,
+    "CompLOPENS": 6511,
+    "CompLOBCS": 7632,
+    "CompLSTS": 24917,
+    "ITGOPENS": 6967,
+    "ITGOBCS": 8365,
+    "ITGSTS": 50043,
+    "ITLOPENS": 7884,
+    "ITLOBCS": 9015,
+    "ITLSTS": 62255,
+    "ENTCGOPENS": 15475,
+    "ENTCGOBCS": 22437,
+    "ENTCGSTS": 55368,
+    "ENTCLOPENS": 14313,
+    "ENTCLOBCS": 20264,
+    "ENTCLSTS": "",
+    "MechGOPENS": "",
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 9251,
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": 10156,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": 10499,
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": 10240,
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 24876,
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 26493,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": "",
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": "",
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A+",
+    "link": "https://vit.edu.in/"
+  },
+  {
+    "instituteName": "Pimpri Chinchwad  Education Trust's  Pimpri Chinchwad  College Of Engineering  And  Research, Ravet",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": 5890,
+    "CompGOBCS": 6011,
+    "CompGSTS": 48705,
+    "CompLOPENS": 5857,
+    "CompLOBCS": 6844,
+    "CompLSTS": 64440,
+    "ITGOPENS": "",
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": "",
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 11166,
+    "ENTCGOBCS": 13562,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 13403,
+    "ENTCLOBCS": 18425,
+    "ENTCLSTS": "",
+    "MechGOPENS": 16968,
+    "MechGOBCS": 17879,
+    "MechGSTS": "",
+    "MechLOPENS": 59379,
+    "MechLOBCS": 69618,
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 7090,
+    "CompGOBCS2": 8856,
+    "CompGSTS2": 8856,
+    "CompLOPENS2": 8614,
+    "CompLOBCS2": 9963,
+    "CompLSTS2": 47936,
+    "ITGOPENS2": 2853,
+    "ITGOBCS2": 3046,
+    "ITGSTS2": 41421,
+    "ITLOPENS2": 4485,
+    "ITLOBCS2": "",
+    "ITLSTS2": 43209,
+    "ENTCGOPENS2": 6912,
+    "ENTCGOBCS2": 7871,
+    "ENTCGSTS2": 30802,
+    "ENTCLOPENS2": 8504,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": 7053,
+    "MechGOPENS2": 10913,
+    "MechGOBCS2": 13034,
+    "MechGSTS2": 80309,
+    "MechLOPENS2": 16545,
+    "MechLOBCS2": 19777,
+    "MechLSTS2": 19777,
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Medium",
+    "naac": "A",
+    "link": "https://www.pccoer.com/"
+  },
+  {
+    "instituteName": "Shri Guru  Gobind  Singhji Institute of  Engineering  and  Technology,  Nanded",
+    "university": "RAMU",
+    "City": "Nanded",
+    "CompGOPENS": 5744,
+    "CompGOBCS": 6416,
+    "CompGSTS": 41324,
+    "CompLOPENS": 7270,
+    "CompLOBCS": 8188,
+    "CompLSTS": 40990,
+    "ITGOPENS": 6887,
+    "ITGOBCS": 7211,
+    "ITGSTS": 62716,
+    "ITLOPENS": 8224,
+    "ITLOBCS": 9640,
+    "ITLSTS": 57402,
+    "ENTCGOPENS": 12743,
+    "ENTCGOBCS": 14342,
+    "ENTCGSTS": 84304,
+    "ENTCLOPENS": 13766,
+    "ENTCLOBCS": 16767,
+    "ENTCLSTS": "",
+    "MechGOPENS": 14408,
+    "MechGOBCS": 15643,
+    "MechGSTS": 76991,
+    "MechLOPENS": 20875,
+    "MechLOBCS": 29054,
+    "MechLSTS": "",
+    "ElecGOPENS": 14578,
+    "ElecGOBCS": 15609,
+    "ElecGSTS": 54731,
+    "ElecLOPENS": 16973,
+    "ElecLOBCS": 18170,
+    "ElecLSTS": "",
+    "CompGOPENS2": 5958,
+    "CompGOBCS2": 6589,
+    "CompGSTS2": 53040,
+    "CompLOPENS2": 7314,
+    "CompLOBCS2": "",
+    "CompLSTS2": 38871,
+    "ITGOPENS2": 7237,
+    "ITGOBCS2": 7337,
+    "ITGSTS2": 71586,
+    "ITLOPENS2": 7417,
+    "ITLOBCS2": 9685,
+    "ITLSTS2": 57402,
+    "ENTCGOPENS2": 12572,
+    "ENTCGOBCS2": 15176,
+    "ENTCGSTS2": 86339,
+    "ENTCLOPENS2": 10326,
+    "ENTCLOBCS2": 14317,
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 18361,
+    "MechGOBCS2": 19238,
+    "MechGSTS2": 77646,
+    "MechLOPENS2": 23719,
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": 5497,
+    "ElecGOBCS2": 18735,
+    "ElecGSTS2": 54777,
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A+",
+    "link": "https://www.sggs.ac.in/"
+  },
+  {
+    "instituteName": "MIT  Academy  of  Engineering,Alandi, Pune",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": 5804,
+    "CompGOBCS": 6189,
+    "CompGSTS": 45189,
+    "CompLOPENS": 7306,
+    "CompLOBCS": 8753,
+    "CompLSTS": 42883,
+    "ITGOPENS": 6632,
+    "ITGOBCS": 7514,
+    "ITGSTS": 56951,
+    "ITLOPENS": 9478,
+    "ITLOBCS": 9836,
+    "ITLSTS": 59384,
+    "ENTCGOPENS": 15649,
+    "ENTCGOBCS": 17365,
+    "ENTCGSTS": 62824,
+    "ENTCLOPENS": 17248,
+    "ENTCLOBCS": 21307,
+    "ENTCLSTS": "",
+    "MechGOPENS": 26274,
+    "MechGOBCS": 30788,
+    "MechGSTS": "",
+    "MechLOPENS": 56692,
+    "MechLOBCS": 69079,
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 6890,
+    "CompGOBCS2": 8286,
+    "CompGSTS2": 46439,
+    "CompLOPENS2": 7659,
+    "CompLOBCS2": 9562,
+    "CompLSTS2": 45189,
+    "ITGOPENS2": 8304,
+    "ITGOBCS2": 8690,
+    "ITGSTS2": 68510,
+    "ITLOPENS2": 11121,
+    "ITLOBCS2": 12463,
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 17094,
+    "ENTCGOBCS2": 19534,
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 17753,
+    "ENTCLOBCS2": 18126,
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 29710,
+    "MechGOBCS2": 45146,
+    "MechGSTS2": "",
+    "MechLOPENS2": 71093,
+    "MechLOBCS2": 46183,
+    "MechLSTS2": 45762,
+    "ElecGOPENS2": 33749,
+    "ElecGOBCS2": 46329,
+    "ElecGSTS2": "",
+    "ElecLOPENS2": 27772,
+    "ElecLOBCS2": 44989,
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A++",
+    "link": "https://mitaoe.ac.in/"
+  },
+  {
+    "instituteName": "All  India  Shri Shivaji Memorial  Society's  College of Engineering,  Pune",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": 5892,
+    "CompGOBCS": 6548,
+    "CompGSTS": 36717,
+    "CompLOPENS": 7331,
+    "CompLOBCS": 8568,
+    "CompLSTS": "",
+    "ITGOPENS": "",
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": "",
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 14047,
+    "ENTCGOBCS": 15125,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 13287,
+    "ENTCLOBCS": 17466,
+    "ENTCLSTS": "",
+    "MechGOPENS": 20085,
+    "MechGOBCS": 28462,
+    "MechGSTS": 31175,
+    "MechLOPENS": 79966,
+    "MechLOBCS": 29328,
+    "MechLSTS": "",
+    "ElecGOPENS": 21455,
+    "ElecGOBCS": 27229,
+    "ElecGSTS": 69557,
+    "ElecLOPENS": 19919,
+    "ElecLOBCS": 42232,
+    "ElecLSTS": "",
+    "CompGOPENS2": 5885,
+    "CompGOBCS2": 7483,
+    "CompGSTS2": 74168,
+    "CompLOPENS2": 5561,
+    "CompLOBCS2": 12915,
+    "CompLSTS2": "",
+    "ITGOPENS2": "",
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": "",
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 20929,
+    "ENTCGOBCS2": 24291,
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 13249,
+    "ENTCLOBCS2": 17173,
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 38200,
+    "MechGOBCS2": 45356,
+    "MechGSTS2": "",
+    "MechLOPENS2": 33420,
+    "MechLOBCS2": 55031,
+    "MechLSTS2": "",
+    "ElecGOPENS2": 35661,
+    "ElecGOBCS2": 49370,
+    "ElecGSTS2": "",
+    "ElecLOPENS2": 65664,
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A+",
+    "link": "https://aissmscoe.com/"
+  },
+  {
+    "instituteName": "Thakur  College of Engineering  and  Technology,  Kandivali, Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 6285,
+    "CompGOBCS": "",
+    "CompGSTS": "",
+    "CompLOPENS": 6674,
+    "CompLOBCS": "",
+    "CompLSTS": "",
+    "ITGOPENS": 7868,
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": 8506,
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 17666,
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 17588,
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": "",
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 6285,
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": 6674,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": 7868,
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": 8506,
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 17666,
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 17588,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 22662,
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": 72907,
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": 24676,
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": 24485,
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Small",
+    "naac": "A+",
+    "link": "https://www.tcetmumbai.in/"
+  },
+  {
+    "instituteName": "Government  College of  Engineering,  Nagpur",
+    "university": "Nagpur",
+    "City": "Nagpur",
+    "CompGOPENS": 5955,
+    "CompGOBCS": 7042,
+    "CompGSTS": 41483,
+    "CompLOPENS": 5618,
+    "CompLOBCS": 8830,
+    "CompLSTS": "",
+    "ITGOPENS": "",
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": "",
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 14371,
+    "ENTCGOBCS": 18586,
+    "ENTCGSTS": 47845,
+    "ENTCLOPENS": 14250,
+    "ENTCLOBCS": 17767,
+    "ENTCLSTS": "",
+    "MechGOPENS": 16650,
+    "MechGOBCS": 17327,
+    "MechGSTS": 59488,
+    "MechLOPENS": 23251,
+    "MechLOBCS": 28353,
+    "MechLSTS": 77585,
+    "ElecGOPENS": 17444,
+    "ElecGOBCS": 18696,
+    "ElecGSTS": 58030,
+    "ElecLOPENS": 12553,
+    "ElecLOBCS": 17296,
+    "ElecLSTS": "",
+    "CompGOPENS2": 5649,
+    "CompGOBCS2": "",
+    "CompGSTS2": 27781,
+    "CompLOPENS2": "",
+    "CompLOBCS2": "",
+    "CompLSTS2": 39221,
+    "ITGOPENS2": "",
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": "",
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 11634,
+    "ENTCGOBCS2": 7654,
+    "ENTCGSTS2": 59356,
+    "ENTCLOPENS2": 9066,
+    "ENTCLOBCS2": 16160,
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 20270,
+    "MechGOBCS2": 21771,
+    "MechGSTS2": 20945,
+    "MechLOPENS2": 29325,
+    "MechLOBCS2": 37157,
+    "MechLSTS2": "",
+    "ElecGOPENS2": 19594,
+    "ElecGOBCS2": 19793,
+    "ElecGSTS2": 55162,
+    "ElecLOPENS2": 19131,
+    "ElecLOBCS2": 21454,
+    "ElecLSTS2": 73099,
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Medium",
+    "naac": "A++",
+    "link": "https://www.gcoen.ac.in/"
+  },
+  {
+    "instituteName": "Dr. D. Y.  Patil Pratishthan's  D.Y.Patil  College of Engineering  Akurdi, Pune",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": 5266,
+    "CompGOBCS": 5755,
+    "CompGSTS": 29386,
+    "CompLOPENS": 6994,
+    "CompLOBCS": 7056,
+    "CompLSTS": 71554,
+    "ITGOPENS": 7516,
+    "ITGOBCS": 7673,
+    "ITGSTS": 36411,
+    "ITLOPENS": 9223,
+    "ITLOBCS": 10666,
+    "ITLSTS": "",
+    "ENTCGOPENS": 14170,
+    "ENTCGOBCS": 15446,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 17347,
+    "ENTCLOBCS": 18787,
+    "ENTCLSTS": "",
+    "MechGOPENS": 19191,
+    "MechGOBCS": 22000,
+    "MechGSTS": "",
+    "MechLOPENS": 65862,
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 5106,
+    "CompGOBCS2": 9067,
+    "CompGSTS2": "",
+    "CompLOPENS2": 8195,
+    "CompLOBCS2": 8963,
+    "CompLSTS2": 42590,
+    "ITGOPENS2": 9588,
+    "ITGOBCS2": 9671,
+    "ITGSTS2": 46414,
+    "ITLOPENS2": 9941,
+    "ITLOBCS2": 10510,
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 25681,
+    "ENTCGOBCS2": 27114,
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 24241,
+    "ENTCLOBCS2": 26472,
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 41574,
+    "MechGOBCS2": 54005,
+    "MechGSTS2": "",
+    "MechLOPENS2": 79980,
+    "MechLOBCS2": 64003,
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A+",
+    "link": "https://www.dypcoeakurdi.ac.in/"
+  },
+  {
+    "instituteName": "Manjara  Charitable Trust's  Rajiv Gandhi Institute of Technology, Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 11297,
+    "CompGOBCS": 13032,
+    "CompGSTS": 52501,
+    "CompLOPENS": 20570,
+    "CompLOBCS": 30792,
+    "CompLSTS": "",
+    "ITGOPENS": 13105,
+    "ITGOBCS": 14607,
+    "ITGSTS": "",
+    "ITLOPENS": 24322,
+    "ITLOBCS": 34026,
+    "ITLSTS": "",
+    "ENTCGOPENS": 45862,
+    "ENTCGOBCS": 65530,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 34661,
+    "ENTCLOBCS": 50981,
+    "ENTCLSTS": "",
+    "MechGOPENS": 81946,
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 8937,
+    "CompGOBCS2": 11885,
+    "CompGSTS2": "",
+    "CompLOPENS2": 10391,
+    "CompLOBCS2": 37026,
+    "CompLSTS2": 48085,
+    "ITGOPENS2": 11989,
+    "ITGOBCS2": 13603,
+    "ITGSTS2": "",
+    "ITLOPENS2": 12637,
+    "ITLOBCS2": 38610,
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 26751,
+    "ENTCGOBCS2": 43589,
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 27209,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 31811,
+    "MechGOBCS2": 44332,
+    "MechGSTS2": "",
+    "MechLOPENS2": 79430,
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Medium",
+    "naac": "A",
+    "link": "https://www.mctrgit.ac.in/"
+  },
+  {
+    "instituteName": "St. Francis  Institute of  Technology,Borivali,  Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 16445,
+    "CompGOBCS": "",
+    "CompGSTS": "",
+    "CompLOPENS": 24273,
+    "CompLOBCS": "",
+    "CompLSTS": "",
+    "ITGOPENS": 20870,
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": 47279,
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 41434,
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 70962,
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": 73284,
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": 43395,
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 7688,
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": 8759,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": 10258,
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": 13443,
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 31893,
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 29903,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 34179,
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": 36917,
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": 45769,
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": 63787,
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Small",
+    "naac": "A",
+    "link": "https://www.sfit.ac.in/"
+  },
+  {
+    "instituteName": "Government  College of  Engineering  &  Research,  Avasari  Khurd",
+    "university": "Pune",
+    "City": "Avasari",
+    "CompGOPENS": 9162,
+    "CompGOBCS": 10218,
+    "CompGSTS": 38369,
+    "CompLOPENS": 10245,
+    "CompLOBCS": 12553,
+    "CompLSTS": 45254,
+    "ITGOPENS": "",
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": "",
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 22555,
+    "ENTCGOBCS": 28755,
+    "ENTCGSTS": 24079,
+    "ENTCLOPENS": 19890,
+    "ENTCLOBCS": 21944,
+    "ENTCLSTS": "",
+    "MechGOPENS": 23840,
+    "MechGOBCS": 29318,
+    "MechGSTS": 69299,
+    "MechLOPENS": 28868,
+    "MechLOBCS": 30870,
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 9162,
+    "CompGOBCS2": 10218,
+    "CompGSTS2": 38369,
+    "CompLOPENS2": 10245,
+    "CompLOBCS2": 12553,
+    "CompLSTS2": 45254,
+    "ITGOPENS2": "",
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": "",
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 22555,
+    "ENTCGOBCS2": 28755,
+    "ENTCGSTS2": 24079,
+    "ENTCLOPENS2": 19890,
+    "ENTCLOBCS2": 21944,
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 23840,
+    "MechGOBCS2": 29318,
+    "MechGSTS2": 69299,
+    "MechLOPENS2": 28868,
+    "MechLOBCS2": 30870,
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A",
+    "link": "https://gcoeara.ac.in/"
+  },
+  {
+    "instituteName": "Jaywant  Shikshan Prasarak Mandal's,Rajarshi Shahu College of Engineering,  Tathawade,  Pune",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": 7785,
+    "CompGOBCS": 8238,
+    "CompGSTS": 76192,
+    "CompLOPENS": 76192,
+    "CompLOBCS": 10973,
+    "CompLSTS": "",
+    "ITGOPENS": 11106,
+    "ITGOBCS": 11618,
+    "ITGSTS": 85659,
+    "ITLOPENS": 11815,
+    "ITLOBCS": 12948,
+    "ITLSTS": "",
+    "ENTCGOPENS": 21272,
+    "ENTCGOBCS": 27028,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 23601,
+    "ENTCLOBCS": 25977,
+    "ENTCLSTS": "",
+    "MechGOPENS": 39465,
+    "MechGOBCS": 52932,
+    "MechGSTS": "",
+    "MechLOPENS": 79949,
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": 28851,
+    "ElecGOBCS": 35646,
+    "ElecGSTS": 54777,
+    "ElecLOPENS": 37861,
+    "ElecLOBCS": 38938,
+    "ElecLSTS": "",
+    "CompGOPENS2": 6783,
+    "CompGOBCS2": "",
+    "CompGSTS2": 78188,
+    "CompLOPENS2": 8477,
+    "CompLOBCS2": 9975,
+    "CompLSTS2": 85312,
+    "ITGOPENS2": 9613,
+    "ITGOBCS2": 10128,
+    "ITGSTS2": 83990,
+    "ITLOPENS2": 9853,
+    "ITLOBCS2": "",
+    "ITLSTS2": 10129,
+    "ENTCGOPENS2": 19459,
+    "ENTCGOBCS2": 20695,
+    "ENTCGSTS2": 21134,
+    "ENTCLOPENS2": 18911,
+    "ENTCLOBCS2": 18394,
+    "ENTCLSTS2": 19508,
+    "MechGOPENS2": 41899,
+    "MechGOBCS2": 64985,
+    "MechGSTS2": 61356,
+    "MechLOPENS2": 74329,
+    "MechLOBCS2": 69883,
+    "MechLSTS2": 56082,
+    "ElecGOPENS2": 29123,
+    "ElecGOBCS2": 37125,
+    "ElecGSTS2": 29395,
+    "ElecLOPENS2": 32686,
+    "ElecLOBCS2": "",
+    "ElecLSTS2": 30011,
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Medium",
+    "naac": "A+",
+    "link": "https://jspmrscoed.edu.in/"
+  },
+  {
+    "instituteName": "Xavier  Institute Of Engineering  C/O Xavier  Technical  Institute,Mahim,Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 7832,
+    "CompGOBCS": "",
+    "CompGSTS": "",
+    "CompLOPENS": 10044,
+    "CompLOBCS": "",
+    "CompLSTS": "",
+    "ITGOPENS": 9987,
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": 12870,
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 21787,
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 24857,
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": "",
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 9251,
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": 10156,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": 10499,
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": 10240,
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 24876,
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 26493,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": "",
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": "",
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Small",
+    "naac": "A",
+    "link": "https://www.xavier.ac.in/"
+  },
+  {
+    "instituteName": "S.I.E.S. Graduate School  of Technology,  Nerul, Navi Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 8200,
+    "CompGOBCS": "",
+    "CompGSTS": "",
+    "CompLOPENS": 8362,
+    "CompLOBCS": "",
+    "CompLSTS": "",
+    "ITGOPENS": 10322,
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": 11310,
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 25059,
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 21043,
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": 22935,
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": 57565,
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 9368,
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": 9092,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": 13886,
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": 12934,
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 33095,
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 33793,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 49147,
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": 36915,
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Medium",
+    "naac": "A",
+    "link": "https://www.siesgst.edu.in/"
+  },
+  {
+    "instituteName": "Don Bosco Institute of Technology, Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 8413,
+    "CompGOBCS": "",
+    "CompGSTS": "",
+    "CompLOPENS": 8993,
+    "CompLOBCS": "",
+    "CompLSTS": "",
+    "ITGOPENS": 10338,
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": 11042,
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 28934,
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 30704,
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": 60858,
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": 64592,
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 9548,
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": 9426,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": 12328,
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": 12959,
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 55850,
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": 68828,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 79334,
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": 84843,
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Small",
+    "naac": "A+",
+    "link": "https://www.dbit.in/"
+  },
+  {
+    "instituteName": "All  India  Shri Shivaji Memorial  Society's  Institute of  Information Technology,Pune",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": 11115,
+    "CompGOBCS": 11822,
+    "CompGSTS": "",
+    "CompLOPENS": 10829,
+    "CompLOBCS": 12968,
+    "CompLSTS": "",
+    "ITGOPENS": 12802,
+    "ITGOBCS": 13552,
+    "ITGSTS": 61241,
+    "ITLOPENS": 12217,
+    "ITLOBCS": 13040,
+    "ITLSTS": "",
+    "ENTCGOPENS": 21647,
+    "ENTCGOBCS": 30084,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 23436,
+    "ENTCLOBCS": 30289,
+    "ENTCLSTS": "",
+    "MechGOPENS": "",
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": 50686,
+    "ElecGOBCS": 69379,
+    "ElecGSTS": "",
+    "ElecLOPENS": 40668,
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 8961,
+    "CompGOBCS2": 11629,
+    "CompGSTS2": 60894,
+    "CompLOPENS2": 60894,
+    "CompLOBCS2": 13040,
+    "CompLSTS2": 8731,
+    "ITGOPENS2": 12703,
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": 8386,
+    "ITLOBCS2": 13217,
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 24905,
+    "ENTCGOBCS2": 30493,
+    "ENTCGSTS2": 25295,
+    "ENTCLOPENS2": 25056,
+    "ENTCLOBCS2": 27638,
+    "ENTCLSTS2": 25538,
+    "MechGOPENS2": "",
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": "",
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": 51283,
+    "ElecGOBCS2": 70422,
+    "ElecGSTS2": 61781,
+    "ElecLOPENS2": 39642,
+    "ElecLOBCS2": 59570,
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Medium",
+    "naac": "A",
+    "link": "https://aissms.org/"
+  },
+  {
+    "instituteName": "Progressive Education Society's  Modern College of  Engineering,  Pune",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": 10473,
+    "CompGOBCS": 11528,
+    "CompGSTS": "",
+    "CompLOPENS": 9992,
+    "CompLOBCS": 10348,
+    "CompLSTS": "",
+    "ITGOPENS": 13829,
+    "ITGOBCS": 15932,
+    "ITGSTS": "",
+    "ITLOPENS": 13268,
+    "ITLOBCS": 15238,
+    "ITLSTS": "",
+    "ENTCGOPENS": 37055,
+    "ENTCGOBCS": 49013,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 31564,
+    "ENTCLOBCS": 45255,
+    "ENTCLSTS": "",
+    "MechGOPENS": 55539,
+    "MechGOBCS": 84316,
+    "MechGSTS": "",
+    "MechLOPENS": 68421,
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": 49370,
+    "ElecGOBCS": 76281,
+    "ElecGSTS": 79766,
+    "ElecLOPENS": 60059,
+    "ElecLOBCS": 83415,
+    "ElecLSTS": "",
+    "CompGOPENS2": 6620,
+    "CompGOBCS2": 6620,
+    "CompGSTS2": 6942,
+    "CompLOPENS2": 8835,
+    "CompLOBCS2": 11528,
+    "CompLSTS2": 8059,
+    "ITGOPENS2": 13121,
+    "ITGOBCS2": 13133,
+    "ITGSTS2": 13938,
+    "ITLOPENS2": 13804,
+    "ITLOBCS2": 14176,
+    "ITLSTS2": 13889,
+    "ENTCGOPENS2": 35822,
+    "ENTCGOBCS2": 44585,
+    "ENTCGSTS2": 38056,
+    "ENTCLOPENS2": 38056,
+    "ENTCLOBCS2": 42633,
+    "ENTCLSTS2": 35431,
+    "MechGOPENS2": 71868,
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": 86654,
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": 64456,
+    "ElecGOBCS2": 66749,
+    "ElecGSTS2": 65768,
+    "ElecLOPENS2": 41395,
+    "ElecLOBCS2": 64320,
+    "ElecLSTS2": 54314,
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Medium",
+    "naac": "A+",
+    "link": "https://moderncoe.edu.in/"
+  },
+  {
+    "instituteName": "Marathwada  Mitra  Mandal's  College of  Engineering,  Karvenagar, Pune",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": 9069,
+    "CompGOBCS": 16409,
+    "CompGSTS": "",
+    "CompLOPENS": 11069,
+    "CompLOBCS": 14037,
+    "CompLSTS": "",
+    "ITGOPENS": 15985,
+    "ITGOBCS": 19251,
+    "ITGSTS": "",
+    "ITLOPENS": 14454,
+    "ITLOBCS": 17000,
+    "ITLSTS": "",
+    "ENTCGOPENS": 45803,
+    "ENTCGOBCS": 67126,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 40872,
+    "ENTCLOBCS": 55001,
+    "ENTCLSTS": "",
+    "MechGOPENS": 41890,
+    "MechGOBCS": 62019,
+    "MechGSTS": "",
+    "MechLOPENS": 78742,
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": 85107,
+    "ElecGOBCS": 87630,
+    "ElecGSTS": "",
+    "ElecLOPENS": 65875,
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 11468,
+    "CompGOBCS2": 17105,
+    "CompGSTS2": 11813,
+    "CompLOPENS2": 5762,
+    "CompLOBCS2": 11919,
+    "CompLSTS2": 11578,
+    "ITGOPENS2": 14294,
+    "ITGOBCS2": 20076,
+    "ITGSTS2": 59723,
+    "ITLOPENS2": 13914,
+    "ITLOBCS2": 18703,
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 42518,
+    "ENTCGOBCS2": 60608,
+    "ENTCGSTS2": 48692,
+    "ENTCLOPENS2": 38656,
+    "ENTCLOBCS2": 79092,
+    "ENTCLSTS2": 41288,
+    "MechGOPENS2": 82682,
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": 68911,
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": 87630,
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": 85606,
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A",
+    "link": "https://www.mmcoe.edu.in/"
+  },
+  {
+    "instituteName": "K.  K.  Wagh Institute of Engineering  Education and  Research, Nashik",
+    "university": "Pune",
+    "City": "Nashik",
+    "CompGOPENS": 9379,
+    "CompGOBCS": 11267,
+    "CompGSTS": 38605,
+    "CompLOPENS": 9709,
+    "CompLOBCS": 11276,
+    "CompLSTS": 22243,
+    "ITGOPENS": 13633,
+    "ITGOBCS": 14901,
+    "ITGSTS": 41704,
+    "ITLOPENS": 11944,
+    "ITLOBCS": 14199,
+    "ITLSTS": 29147,
+    "ENTCGOPENS": 28803,
+    "ENTCGOBCS": 36238,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 23269,
+    "ENTCLOBCS": 27582,
+    "ENTCLSTS": "",
+    "MechGOPENS": 29433,
+    "MechGOBCS": 45363,
+    "MechGSTS": 87621,
+    "MechLOPENS": 56238,
+    "MechLOBCS": 74344,
+    "MechLSTS": "",
+    "ElecGOPENS": 32934,
+    "ElecGOBCS": 42801,
+    "ElecGSTS": 57840,
+    "ElecLOPENS": 34908,
+    "ElecLOBCS": 36559,
+    "ElecLSTS": 60555,
+    "CompGOPENS2": 8782,
+    "CompGOBCS2": 11197,
+    "CompGSTS2": "",
+    "CompLOPENS2": "",
+    "CompLOBCS2": "",
+    "CompLSTS2": 38601,
+    "ITGOPENS2": 14646,
+    "ITGOBCS2": 15200,
+    "ITGSTS2": "",
+    "ITLOPENS2": 13347,
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 31150,
+    "ENTCGOBCS2": 42805,
+    "ENTCGSTS2": 35639,
+    "ENTCLOPENS2": 21452,
+    "ENTCLOBCS2": 23771,
+    "ENTCLSTS2": 34311,
+    "MechGOPENS2": 28145,
+    "MechGOBCS2": 52068,
+    "MechGSTS2": 43614,
+    "MechLOPENS2": 41985,
+    "MechLOBCS2": 36556,
+    "MechLSTS2": 52980,
+    "ElecGOPENS2": 28388,
+    "ElecGOBCS2": 30090,
+    "ElecGSTS2": 56112,
+    "ElecLOPENS2": 18704,
+    "ElecLOBCS2": 18704,
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A+",
+    "link": "https://engg.kkwagh.edu.in/"
+  },
+  {
+    "instituteName": "Sinhgad  College of  Engineering,  Vadgaon (BK), Pune",
+    "university": "Pune",
+    "City": "Pune",
+    "CompGOPENS": 9727,
+    "CompGOBCS": 12581,
+    "CompGSTS": 86402,
+    "CompLOPENS": 8803,
+    "CompLOBCS": 13220,
+    "CompLSTS": "",
+    "ITGOPENS": 16153,
+    "ITGOBCS": 18803,
+    "ITGSTS": "",
+    "ITLOPENS": 16306,
+    "ITLOBCS": 21167,
+    "ITLSTS": "",
+    "ENTCGOPENS": 42497,
+    "ENTCGOBCS": 61597,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 44334,
+    "ENTCLOBCS": 59570,
+    "ENTCLSTS": "",
+    "MechGOPENS": 83981,
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": 87959,
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 11764,
+    "CompGOBCS2": 12421,
+    "CompGSTS2": 84302,
+    "CompLOPENS2": 12769,
+    "CompLOBCS2": 14006,
+    "CompLSTS2": "",
+    "ITGOPENS2": 15760,
+    "ITGOBCS2": 17136,
+    "ITGSTS2": 67693,
+    "ITLOPENS2": 15921,
+    "ITLOBCS2": 24001,
+    "ITLSTS2": 16159,
+    "ENTCGOPENS2": 42923,
+    "ENTCGOBCS2": 45510,
+    "ENTCGSTS2": 45281,
+    "ENTCLOPENS2": 36381,
+    "ENTCLOBCS2": 51514,
+    "ENTCLSTS2": 43997,
+    "MechGOPENS2": 83798,
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": 57062,
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A+",
+    "link": "http://cms.sinhgad.edu/sinhgad_engineering_institutes/vadgaon_scoe/about.aspx"
+  },
+  {
+    "instituteName": "Vidyavardhini's  College of  Engineering  and  Technology,  Vasai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 28256,
+    "CompGOBCS": 28295,
+    "CompGSTS": 73911,
+    "CompLOPENS": 48626,
+    "CompLOBCS": 61058,
+    "CompLSTS": "",
+    "ITGOPENS": 40463,
+    "ITGOBCS": 81680,
+    "ITGSTS": "",
+    "ITLOPENS": 18207,
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 31091,
+    "ENTCGOBCS": 77100,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 31893,
+    "ENTCLOBCS": 38530,
+    "ENTCLSTS": "",
+    "MechGOPENS": 30807,
+    "MechGOBCS": 51012,
+    "MechGSTS": "",
+    "MechLOPENS": 46264,
+    "MechLOBCS": 64725,
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 11782,
+    "CompGOBCS2": 21145,
+    "CompGSTS2": "",
+    "CompLOPENS2": 37514,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": "",
+    "ITGOBCS2": 64950,
+    "ITGSTS2": 22460,
+    "ITLOPENS2": "",
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 39266,
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": "",
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": "",
+    "MechGOBCS2": 74166,
+    "MechGSTS2": 37206,
+    "MechLOPENS2": 30256,
+    "MechLOBCS2": 75640,
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A+",
+    "link": "https://vcet.edu.in/"
+  },
+  {
+    "instituteName": "Government  College of  Engineering, Jalgaon",
+    "university": "NMU",
+    "City": "Jalgaon",
+    "CompGOPENS": 9957,
+    "CompGOBCS": 12183,
+    "CompGSTS": 43040,
+    "CompLOPENS": 11453,
+    "CompLOBCS": 13605,
+    "CompLSTS": 38871,
+    "ITGOPENS": "",
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": "",
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 22217,
+    "ENTCGOBCS": 27862,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 19791,
+    "ENTCLOBCS": 23957,
+    "ENTCLSTS": "",
+    "MechGOPENS": 22278,
+    "MechGOBCS": 24957,
+    "MechGSTS": 85376,
+    "MechLOPENS": 44829,
+    "MechLOBCS": 58534,
+    "MechLSTS": 86919,
+    "ElecGOPENS": 25694,
+    "ElecGOBCS": 29646,
+    "ElecGSTS": 74279,
+    "ElecLOPENS": 33269,
+    "ElecLOBCS": 38486,
+    "ElecLSTS": 81547,
+    "CompGOPENS2": 11559,
+    "CompGOBCS2": 13902,
+    "CompGSTS2": 49915,
+    "CompLOPENS2": 17280,
+    "CompLOBCS2": 18868,
+    "CompLSTS2": 66069,
+    "ITGOPENS2": "",
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": "",
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 30085,
+    "ENTCGOBCS2": 34677,
+    "ENTCGSTS2": 35501,
+    "ENTCLOPENS2": 25447,
+    "ENTCLOBCS2": 32057,
+    "ENTCLSTS2": 34563,
+    "MechGOPENS2": 26461,
+    "MechGOBCS2": 34057,
+    "MechGSTS2": 35497,
+    "MechLOPENS2": 54581,
+    "MechLOBCS2": 72995,
+    "MechLSTS2": 35656,
+    "ElecGOPENS2": 33357,
+    "ElecGOBCS2": 39590,
+    "ElecGSTS2": 77733,
+    "ElecLOPENS2": 35493,
+    "ElecLOBCS2": 39486,
+    "ElecLSTS2": 81859,
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A",
+    "link": "https://www.gcoej.ac.in/"
+  },
+  {
+    "instituteName": "Yeshwantrao Chavan College of  Engineering,Wanadongri, Nagpur",
+    "university": "Nagpur",
+    "City": "Nagpur",
+    "CompGOPENS": 10255,
+    "CompGOBCS": 11817,
+    "CompGSTS": 33213,
+    "CompLOPENS": 11857,
+    "CompLOBCS": 13449,
+    "CompLSTS": 20115,
+    "ITGOPENS": 15016,
+    "ITGOBCS": 16630,
+    "ITGSTS": 55450,
+    "ITLOPENS": 15969,
+    "ITLOBCS": 17887,
+    "ITLSTS": 60240,
+    "ENTCGOPENS": 22195,
+    "ENTCGOBCS": 25480,
+    "ENTCGSTS": 86996,
+    "ENTCLOPENS": 23709,
+    "ENTCLOBCS": 25227,
+    "ENTCLSTS": 66615,
+    "MechGOPENS": 32220,
+    "MechGOBCS": 39349,
+    "MechGSTS": 86752,
+    "MechLOPENS": 54529,
+    "MechLOBCS": 82102,
+    "MechLSTS": "",
+    "ElecGOPENS": 46139,
+    "ElecGOBCS": 64892,
+    "ElecGSTS": "",
+    "ElecLOPENS": 48260,
+    "ElecLOBCS": 81609,
+    "ElecLSTS": 70275,
+    "CompGOPENS2": 10645,
+    "CompGOBCS2": 11326,
+    "CompGSTS2": 21078,
+    "CompLOPENS2": 10748,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": 15102,
+    "ITGOBCS2": 15522,
+    "ITGSTS2": 48705,
+    "ITLOPENS2": 147656,
+    "ITLOBCS2": "",
+    "ITLSTS2": 65231,
+    "ENTCGOPENS2": 20080,
+    "ENTCGOBCS2": 23564,
+    "ENTCGSTS2": 87193,
+    "ENTCLOPENS2": 16622,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": 23370,
+    "MechGOPENS2": 34361,
+    "MechGOBCS2": 43625,
+    "MechGSTS2": 45591,
+    "MechLOPENS2": 45092,
+    "MechLOBCS2": 57451,
+    "MechLSTS2": 41460,
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A+",
+    "link": "https://www.ycce.edu/"
+  },
+  {
+    "instituteName": "Bharati  Vidyapeeth College of Engineering,  Navi Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 10812,
+    "CompGOBCS": 11343,
+    "CompGSTS": 73078,
+    "CompLOPENS": 16594,
+    "CompLOBCS": 21672,
+    "CompLSTS": "",
+    "ITGOPENS": 12348,
+    "ITGOBCS": 12699,
+    "ITGSTS": 54067,
+    "ITLOPENS": 18755,
+    "ITLOBCS": 27012,
+    "ITLSTS": "",
+    "ENTCGOPENS": 41399,
+    "ENTCGOBCS": 51698,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 54961,
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": 61192,
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": 84640,
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 13512,
+    "CompGOBCS2": 14783,
+    "CompGSTS2": 16340,
+    "CompLOPENS2": 20287,
+    "CompLOBCS2": 31875,
+    "CompLSTS2": "",
+    "ITGOPENS2": 17638,
+    "ITGOBCS2": 19334,
+    "ITGSTS2": 18300,
+    "ITLOPENS2": 24730,
+    "ITLOBCS2": 31658,
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 56849,
+    "ENTCGOBCS2": 61334,
+    "ENTCGSTS2": 73016,
+    "ENTCLOPENS2": 72369,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": 84640,
+    "MechGOPENS2": 74511,
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": 86519,
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A+",
+    "link": "https://bvcoenm.edu.in/"
+  },
+  {
+    "instituteName": "Atharva  College of  Engineering,Malad(West),Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 24877,
+    "CompGOBCS": 29734,
+    "CompGSTS": "",
+    "CompLOPENS": 26969,
+    "CompLOBCS": 50522,
+    "CompLSTS": "",
+    "ITGOPENS": 40863,
+    "ITGOBCS": 53066,
+    "ITGSTS": "",
+    "ITLOPENS": 85926,
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 81343,
+    "ENTCGOBCS": 87485,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": "",
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": "",
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": 87355,
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 27075,
+    "CompGOBCS2": 38355,
+    "CompGSTS2": 29642,
+    "CompLOPENS2": 74454,
+    "CompLOBCS2": "",
+    "CompLSTS2": 31616,
+    "ITGOPENS2": 37997,
+    "ITGOBCS2": 39494,
+    "ITGSTS2": 43723,
+    "ITLOPENS2": 80068,
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 44119,
+    "ENTCGOBCS2": 79506,
+    "ENTCGSTS2": 48281,
+    "ENTCLOPENS2": 33809,
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": 53484,
+    "MechGOPENS2": "",
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": "",
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": 42742,
+    "ElecGOBCS2": "",
+    "ElecGSTS2": 80244,
+    "ElecLOPENS2": 14140,
+    "ElecLOBCS2": 67100,
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Small",
+    "naac": "A",
+    "link": "https://atharvacoe.ac.in/"
+  },
+  {
+    "instituteName": "K. E.  Society's  Rajarambapu Institute of Technology, Walwa, Sangli",
+    "university": "Shivaji",
+    "City": "Walwa,  Sangli",
+    "CompGOPENS": 11164,
+    "CompGOBCS": 16132,
+    "CompGSTS": 79386,
+    "CompLOPENS": 11600,
+    "CompLOBCS": 15916,
+    "CompLSTS": "",
+    "ITGOPENS": "",
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": "",
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 23065,
+    "ENTCGOBCS": 29937,
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 22196,
+    "ENTCLOBCS": 26002,
+    "ENTCLSTS": "",
+    "MechGOPENS": 31643,
+    "MechGOBCS": 58670,
+    "MechGSTS": "",
+    "MechLOPENS": 42617,
+    "MechLOBCS": 74749,
+    "MechLSTS": "",
+    "ElecGOPENS": 24760,
+    "ElecGOBCS": 33847,
+    "ElecGSTS": "",
+    "ElecLOPENS": 22100,
+    "ElecLOBCS": 25811,
+    "ElecLSTS": "",
+    "CompGOPENS2": 12412,
+    "CompGOBCS2": 15340,
+    "CompGSTS2": 13038,
+    "CompLOPENS2": 11110,
+    "CompLOBCS2": "",
+    "CompLSTS2": 12694,
+    "ITGOPENS2": "",
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": "",
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 24029,
+    "ENTCGOBCS2": 27946,
+    "ENTCGSTS2": 25636,
+    "ENTCLOPENS2": 19620,
+    "ENTCLOBCS2": 26712,
+    "ENTCLSTS2": 24815,
+    "MechGOPENS2": 35316,
+    "MechGOBCS2": 81839,
+    "MechGSTS2": 41845,
+    "MechLOPENS2": 78770,
+    "MechLOBCS2": 46131,
+    "MechLSTS2": 40652,
+    "ElecGOPENS2": 27497,
+    "ElecGOBCS2": 48361,
+    "ElecGSTS2": 30861,
+    "ElecLOPENS2": 22582,
+    "ElecLOBCS2": 38180,
+    "ElecLSTS2": 30173,
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A+",
+    "link": "Best Engineering Colleges in Maharashtra | Top Autonomous Engineering Colleges in Maharashtra | Rajarambapu Institute of Technology, Rajaramnagar (ritindia.edu)"
+  },
+  {
+    "instituteName": "Rizvi Education Society's  Rizvi College of Engineering,  Bandra,Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 14146,
+    "CompGOBCS": "",
+    "CompGSTS": "",
+    "CompLOPENS": 21384,
+    "CompLOBCS": "",
+    "CompLSTS": "",
+    "ITGOPENS": "",
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": "",
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 45031,
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": "",
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": 74511,
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 23856,
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": 46443,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": "",
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": "",
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 67420,
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": "",
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 64745,
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": "",
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Small",
+    "naac": "A",
+    "link": "https://eng.rizvi.edu.in/"
+  },
+  {
+    "instituteName": "Mahatma  Education Society's  Pillai  College of  Engineering,  New  Panvel",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 24180,
+    "CompGOBCS": "",
+    "CompGSTS": "",
+    "CompLOPENS": 23170,
+    "CompLOBCS": "",
+    "CompLSTS": "",
+    "ITGOPENS": 31531,
+    "ITGOBCS": "",
+    "ITGSTS": "",
+    "ITLOPENS": 78721,
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": 79379,
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 65500,
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": 56941,
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 22544,
+    "CompGOBCS2": "",
+    "CompGSTS2": "",
+    "CompLOPENS2": 35215,
+    "CompLOBCS2": "",
+    "CompLSTS2": "",
+    "ITGOPENS2": 22881,
+    "ITGOBCS2": "",
+    "ITGSTS2": "",
+    "ITLOPENS2": "",
+    "ITLOBCS2": "",
+    "ITLSTS2": "",
+    "ENTCGOPENS2": 64409,
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": "",
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 40083,
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": "",
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Medium",
+    "naac": "A+",
+    "link": "https://www.pce.ac.in/"
+  },
+  {
+    "instituteName": "N.Y.S.S.'s  Datta  Meghe College of  Engineering,  Airoli, Navi  Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 30984,
+    "CompGOBCS": 41294,
+    "CompGSTS": "",
+    "CompLOPENS": 36058,
+    "CompLOBCS": 49827,
+    "CompLSTS": "",
+    "ITGOPENS": 44779,
+    "ITGOBCS": 51638,
+    "ITGSTS": "",
+    "ITLOPENS": 65741,
+    "ITLOBCS": "",
+    "ITLSTS": "",
+    "ENTCGOPENS": "",
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": "",
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": 67441,
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 31094,
+    "CompGOBCS2": "",
+    "CompGSTS2": 32601,
+    "CompLOPENS2": 57363,
+    "CompLOBCS2": 57893,
+    "CompLSTS2": "",
+    "ITGOPENS2": 40683,
+    "ITGOBCS2": 53716,
+    "ITGSTS2": 46121,
+    "ITLOPENS2": 35883,
+    "ITLOBCS2": 58465,
+    "ITLSTS2": "",
+    "ENTCGOPENS2": "",
+    "ENTCGOBCS2": "",
+    "ENTCGSTS2": "",
+    "ENTCLOPENS2": "",
+    "ENTCLOBCS2": "",
+    "ENTCLSTS2": "",
+    "MechGOPENS2": 54783,
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": "",
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Medium",
+    "naac": "A+",
+    "link": "https://www.dmce.ac.in/"
+  },
+  {
+    "instituteName": "Terna  Engineering  College, Nerul, Navi  Mumbai",
+    "university": "Mumbai",
+    "City": "Mumbai",
+    "CompGOPENS": 23433,
+    "CompGOBCS": 28966,
+    "CompGSTS": "",
+    "CompLOPENS": 15159,
+    "CompLOBCS": 35915,
+    "CompLSTS": "",
+    "ITGOPENS": 35280,
+    "ITGOBCS": 43309,
+    "ITGSTS": "",
+    "ITLOPENS": 33796,
+    "ITLOBCS": 57486,
+    "ITLSTS": "",
+    "ENTCGOPENS": 82110,
+    "ENTCGOBCS": "",
+    "ENTCGSTS": "",
+    "ENTCLOPENS": 70463,
+    "ENTCLOBCS": "",
+    "ENTCLSTS": "",
+    "MechGOPENS": 63035,
+    "MechGOBCS": "",
+    "MechGSTS": "",
+    "MechLOPENS": "",
+    "MechLOBCS": "",
+    "MechLSTS": "",
+    "ElecGOPENS": "",
+    "ElecGOBCS": "",
+    "ElecGSTS": "",
+    "ElecLOPENS": "",
+    "ElecLOBCS": "",
+    "ElecLSTS": "",
+    "CompGOPENS2": 17964,
+    "CompGOBCS2": 19350,
+    "CompGSTS2": 18035,
+    "CompLOPENS2": 15410,
+    "CompLOBCS2": "",
+    "CompLSTS2": 16044,
+    "ITGOPENS2": 35331,
+    "ITGOBCS2": 25181,
+    "ITGSTS2": 38734,
+    "ITLOPENS2": 36178,
+    "ITLOBCS2": "",
+    "ITLSTS2": 19310,
+    "ENTCGOPENS2": 51328,
+    "ENTCGOBCS2": 83188,
+    "ENTCGSTS2": 79413,
+    "ENTCLOPENS2": 80924,
+    "ENTCLOBCS2": 84143,
+    "ENTCLSTS2": 85511,
+    "MechGOPENS2": 88576,
+    "MechGOBCS2": "",
+    "MechGSTS2": "",
+    "MechLOPENS2": 85802,
+    "MechLOBCS2": "",
+    "MechLSTS2": "",
+    "ElecGOPENS2": "",
+    "ElecGOBCS2": "",
+    "ElecGSTS2": "",
+    "ElecLOPENS2": "",
+    "ElecLOBCS2": "",
+    "ElecLSTS2": "",
+    "firstRank": "",
+    "secondRank": "",
+    "campusSize": "Large",
+    "naac": "A+",
+    "link": "https://ternaengg.ac.in/"
+  },
+]
+const categoriesss = [
+    'GOPENS','GOBCS','GSTS','LOPENS','LOBCS','LSTS'
+]
+
+const branchesss = [
+    'Comp','IT','ENTC','Mech','Elec'
+]
+
+class College{
+    constructor(college,firstRank,secondRank, category, branch){
+        this.name = college.instituteName
+        this.university = college.university
+        this.City = college.City
+        this.link = college.link
+        this.naac = college.naac
+        this.campusSize = college.campusSize
+        this.category = category
+        this.branch = branch
+        this.firstRank = firstRank
+        this.secondRank = secondRank
+    }
+}
+let newColleges = []
+populateColleges()
+function populateColleges(){
+    for (let i=0; i<colleges.length; i++){
+        const collegee = colleges[i]
+        for (let j = 0; j < 6; j++) {
+            const categoryy = categoriesss[j];
+            for (let k = 0; k < 5; k++) {
+                const branchh = branchesss[k];
+                let branchcat = String(branchh)+String(categoryy)
+                let branchcat2 = String(branchh)+String(categoryy)+"2"
+                let firstRank = 1
+                let secondRank = 1
+                for(const property in collegee){
+                    if(property == branchcat){
+                        firstRank = collegee[property]
+                    }
+                    if(property == branchcat2){
+                        secondRank = collegee[property]
+                    }
+                    
+                }
+                let newCollege = new College(collegee,firstRank,secondRank,categoryy,branchh)
+                newColleges.push(newCollege)
+            }
+        }
+}
+}
+
+
+
+    function getFilteredData() {
+      let rank = $('input[id="rank"]').val();
+      let category = $('select[id="categories"]').val();
+      let branch = $('select[id="branch"]').val();
+      let university = $('select[id="university"]').val();
+      let collegeType = $('select[id="collegeType"]').val();
+      let round = $('input[name="round"]:checked').val();
+      let campus = $('select[id="campus"]').val()
+      let naac = $('select[id="naac"]').val()
+      let e= $('select[id="countries"]').val()
+
+      
+// console.log(branch,category)
+
+      let filteredData = newColleges;
+
+      filteredData = filteredData.filter(function(item){
+        if(round=="R1"){
+          return item.firstRank>=rank
+        }
+        else{
+          return item.secondRank>=rank
+        }})
+
+      if(category!="All"){
+      filteredData = filteredData.filter(function(item){
+        return item.category==category
+      })}
+      let newarr = []
+      if(e.length!=0){
+        for(element in e){
+          // console.log(e[element])
+          let name = String(e[element])
+          filteredData.forEach(element => {
+            if(name.includes(element.name)){
+              if(name.includes(`(${element.branch})`)){
+              newarr.push(element)
+            }}
+          });
+
+        }
+        filteredData=filteredData.filter(function(item){
+          return newarr.includes(item)
+        })
+      }
+      
+      console.log(filteredData)
+    return filteredData
+    }
+      // filteredData.forEach(element => {
+      //   if(gender == "All" || gender == "Gender-Neutral"){
+      //     if(branch=="CSE"){
+      //       if(category=="SC"){
+      //         if (rank) {
+      //         filteredData = filteredData.filter(function (item) {
+      //         return (Number(item.closingRank) <= rank);
+      //           });
+      //       }
+      //       }
+      //     }
+      //   }
+      // });
+
+      // if (rank) {
+      //   filteredData = filteredData.filter(function (item) {
+      //     return (Number(item.closingRank) >= rank);
+      //   });
+      // }
+      // if (category && category != "All") {
+      //   filteredData = filteredData.filter(function (item) {
+      //     return item.category === category;
+      //   });
+      // }
+      // if (branch && branch.length > 0) {
+      //   if (!branch.includes('All')) {
+      //     let AllProgramMaps = []
+      //     branch.forEach(b => {
+      //       AllProgramMaps = [
+      //         ...AllProgramMaps,
+      //         ...programMaps[b]
+      //       ]
+      //     })
+      //     filteredData = filteredData.filter(function (item) {
+      //       return AllProgramMaps.includes(item.program);
+      //     });
+      //   }}
+      
+      // if (gender && (gender !== 'All' || gender !== 'Gender-Neutral')) {
+      //   filteredData = filteredData.filter(function (item) {
+      //     return item.seat === gender;
+      //   });
+      // }
+      // let filteredCount = document.getElementById('collegeCount')
+      // filteredCount.textContent = filteredData.length;
+      // return filteredData;
+        
+    
+    function populateCollegesToTable() {
+      let filteredData = getFilteredData();
+      let round = $('input[name="round"]:checked').val();
+
+      
+      
+      for (let i = 0; i < filteredData.length; i++) {
+        if(filteredData[i].firstRank>filteredData[i].secondRank){
+          let temp = filteredData[i].firstRank
+          filteredData[i].firstRank = filteredData[i].secondRank
+          filteredData[i].secondRank = temp
+        }
+
+      }
+
+      for (let i = 0; i < filteredData.length; i++) {
+        const element = filteredData[i];
+        if(element.firstRank=="" && element.secondRank!=""){
+          element.firstRank = element.secondRank
+        }
+        if(element.secondRank=="" && element.firstRank!=""){
+          element.secondRank = element.firstRank
+        }
+        
+      }
+      
+      filteredData = filteredData.filter(function(item){
+        return item.firstRank!=""
+      })
+      let filteredCount = document.getElementById('collegeCount')
+      filteredCount.textContent = filteredData.length;
+      
+      // sort the data on the basis of opening rank
+      filteredData = filteredData.sort((a, b) => {
+        if(round=="R1"){
+        return a.firstRank - b.firstRank;
+        }
+        else{
+          return a.secondRank - b.secondRank;
+        }
+      });
+
+      // let state = $('select[id="state"]').val();
+
+      // if (state && state !== 'All') {
+      //   document.getElementById('ifHomeState').innerHTML = `Please note:<br>1. Since, you have selected your home state (domicile) as <span class="text-warning">${state}</span>, we will be shown only <span class="text-warning">HOME STATE (HS) quota</span> first for colleges in ${state} and other quotas are not displayed. HOME STATE (HS) quota for other states are not displayed.<br>2. If you do not see any colleges in your home state, then as per 2021 data, you're not eligible for the colleges as per applied filter(s) and CRL under HS quota. You will see the list of colleges from other states where you are eligible (if any)`
+      //   let shift = 0;
+      //   filteredData.forEach(function(item,i){
+      //     if(item.quota === "HS"){
+      //       filteredData.splice(i, 1);
+      //       filteredData[shift] = item
+      //       shift++;
+      //     }
+      //   });
+      // }
+
+      var table = document.getElementById("collegeTable");
+      // remove all the child elements in table
+      table.innerHTML = "";
+      for (var i = 0; i < filteredData.length; i++) {
+        // if(filteredData[i].firstRank>filteredData[i].secondRank){
+        //   let temp = filteredData[i].firstRank
+        //   filteredData[i].firstRank = filteredData[i].secondRank
+        //   filteredData[i].secondRank = temp
+        // }
+        let row = document.createElement("tr");
+        // switch (branchcat) {
+        //   case CompGOPENS:
+            
+        //     break;
+        
+        //   default:
+        //     break;
+        // }
+        // if (state && state !== 'All' && filteredData[i].quota === 'HS') {
+        //   row.classList.add('text-warning')
+        // }
+       
+        let college = document.createElement("td");
+        college.innerHTML = `<a href= ${filteredData[i].link} target="_blank" style="color: #333333">${filteredData[i].name}</a>`;
+        // college.innerHTML = <a href="google.com"></a>
+        row.appendChild(college);
+        
+        let City = document.createElement("td");
+        City.innerHTML = filteredData[i].City;
+        row.appendChild(City);
+
+        let branch = document.createElement("td");
+        branch.innerHTML = filteredData[i].branch
+        // openingRank.innerHTML = $('select[id="branch"]').val();
+        row.appendChild(branch);
+
+        let openingRank = document.createElement("td");
+        openingRank.innerHTML = filteredData[i].firstRank;
+        row.appendChild(openingRank);
+
+        // let quota = document.createElement("td");
+        // quota.innerHTML = filteredData[i].quota;
+        // row.appendChild(quota);
+
+        let closingRank = document.createElement("td");
+        closingRank.innerHTML = filteredData[i].secondRank;
+        
+        row.appendChild(closingRank);
+
+        
+        // let type = document.createElement("td");
+        // type.innerHTML = filteredData[i].type;
+        // row.appendChild(type);
+
+        let category = document.createElement("td");
+        category.innerHTML = filteredData[i].category
+        
+        row.appendChild(category);
+        
+        let campus = document.createElement("td");
+        campus.innerHTML = filteredData[i].campusSize;
+        row.appendChild(campus);
+
+        let naac = document.createElement("td");
+        naac.innerHTML = filteredData[i].naac;
+        row.appendChild(naac);
+
+        table.appendChild(row);
+      }}
+    
+    populateCollegesToTable();
+  </script>
+
+</body>
+
+</html>
